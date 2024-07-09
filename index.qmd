@@ -1,0 +1,15 @@
+# Preface {.unnumbered}
+
+Referências para construção do livro:
+
+-   [livro R para Ciência de Dados](https://github.com/cienciadedatos/pt-r4ds).
+
+-   [Quarto book](https://quarto.org/docs/books/book-structure.html)
+
+-   [Git e GitHub](Git e GitHub)
+
+To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+```{r}
+1 + 1
+```

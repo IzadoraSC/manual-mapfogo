@@ -1,0 +1,41 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Manual de Mapeamento de Fogo: para o cerrado maranhense"
+  reader-mode: true
+  
+
+  cover-image: cover.png
+  favicon: cover.png
+  #site-url: https://r4ds.hadley.nz/
+  repo-url: https://github.com/hadley/r4ds/
+  repo-branch: main
+  repo-actions: [edit, issue]
+  
+  chapters:
+    - index.qmd
+    
+    #- preface.qmd
+    - intro.qmd
+    - part: Ferramentas
+      chapters: 
+      - summary.qmd
+      - Capítulo 1.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - r4ds.scss
+    code-link: true
+    author-meta: "Izadora S. de Carvalho, Swanni T. Alvarado, Henrique Leão, Tiago Massi Ferraz"
+    callout-appearance: simple
+
+
+editor: visual
+

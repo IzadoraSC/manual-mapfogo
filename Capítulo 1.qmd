@@ -1,0 +1,9 @@
+# Capítulo 1
+
+Este é um capítulo introdutório.
+
+![Figura 1. Mapa de temperatura de superfície do Parque Nacional da Chapda das Mesas.](img/fig1.png){fig-align="center" width="598"}
+
+```{r}
+1 + 1
+```
