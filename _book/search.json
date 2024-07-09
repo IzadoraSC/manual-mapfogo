@@ -11,27 +11,40 @@
     "href": "intro.html",
     "title": "\n1  Introduction\n",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "\n2  Summary\n",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Ferramentas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
   },
   {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Manual de Mapeamento de Fogo: para o cerrado maranhense",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+    "text": "Agradecimentos\nO manual de Mapeamento de Fogo em Áreas do Cerrado Maranhense foi idealizado pelo pesquisador Celso Silva-Júnior a partir dos trabalhos desenvolvidos por Izadora Santos de Carvalho sob orientação da pesquisadora Drª Swanni T. Alvarado da Universidad Nacional de Colombia (UNAL - Bogotá), e Dr. Tiago Massi Ferraz da Universidade Estadual do Maranhão (UEMA - São Luís).\nInstituições por seu apoio e financiamento: FAPEMA, CAPES, MapFire\n\n\nPrefácio\nO manual de Mapeamento de Fogo em Áreas do Cerrado Maranhense está sendo desenvolvido para registrar os trabalhos de mapeamento realizados em áreas de proteção (Unidades de Conservação e Territórios Indigenas) inseridas no bioma Cerrado. Este manual tem como primeira área destaque na geração de informações e produtos de detecção e mapeamento de queimadas o Parque Nacional da Chapada das Mesas (PNCM), a partir do trabalho desenvolvido por Carvalho e colaboradores (2023). Contudo outras áreas de proteção no estado do Maranhão possuiem trabalhos de mapeamento de fogo em adamento ou prospectados. Portanto esta será uma primeira versão do manual que será atualizado conforme os trabalho forem ocorrendo e colaborações de outros autores forem surgindo.\nMuitos produtos de detecção automático de áreas queimadas foram desenvolvidos ao longo do tempo, com o avanço dos sensores e produtos obtidos por sensoriamento remoto. Este manual tem por objetivo, em metodologias que fornecem produtos mais detalhados de informações de histórico de fogo, levando em consideração as características locais de cada área/região mapeada.O Cerrado é caracterizado pela sua heterogeneidade fitofisionomica, portando buscamos divulgar dados em uma escala (espacial/temporal) que contemplem a biodiversidade existente, principalmente na região do Cerrado maranhense que está localizado ao norte da área do bioma, entre uma região de transição Amazônia-Cerrado-Caatinga.\nReferências para construção do livro:\n\nlivro R para Ciência de Dados.\nQuarto book\nGit e GitHub\n\nEste produto foi desenvolvido utilizando Quarto books.",
+    "crumbs": [
+      "Agradecimentos"
+    ]
   }
 ]
