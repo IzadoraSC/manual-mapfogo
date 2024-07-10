@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ariane Hayana">
+
+<title>Meu relatório em Quarto</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="relatorio_html_files/libs/clipboard/clipboard.min.js"></script>
+<script src="relatorio_html_files/libs/quarto-html/quarto.js"></script>
+<script src="relatorio_html_files/libs/quarto-html/popper.min.js"></script>
+<script src="relatorio_html_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="relatorio_html_files/libs/quarto-html/anchor.min.js"></script>
+<link href="relatorio_html_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="relatorio_html_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="relatorio_html_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="relatorio_html_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="relatorio_html_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="relatorio_html_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="relatorio_html_files/libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<style>
+    .quarto-title-block .quarto-title-banner {
+      background: #874a9c;
+    }
+    </style>
+
+<script src="relatorio_html_files/libs/core-js-2.5.3/shim.min.js"></script>
+<script src="relatorio_html_files/libs/react-17.0.0/react.min.js"></script>
+<script src="relatorio_html_files/libs/react-17.0.0/react-dom.min.js"></script>
+<script src="relatorio_html_files/libs/reactwidget-1.0.0/react-tools.js"></script>
+<script src="relatorio_html_files/libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<link href="relatorio_html_files/libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+<script src="relatorio_html_files/libs/reactable-binding-0.4.4/reactable.js"></script>
+<script src="relatorio_html_files/libs/d3-3.5.5/d3.v3.min.js"></script>
+<link href="relatorio_html_files/libs/pairsD3-0.1.1/style.css" rel="stylesheet">
+<script src="relatorio_html_files/libs/pairsD3-binding-0.1.3/pairsD3.js"></script>
+<script src="relatorio_html_files/libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="relatorio_html_files/libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="relatorio_html_files/libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="relatorio_html_files/libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="relatorio_html_files/libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="relatorio_html_files/libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="relatorio_html_files/libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+<link rel="stylesheet" href="custom.css">
+</head>
+
+<body>
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Meu relatório em Quarto</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Código</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Mostrar o código</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Esconder o código</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">Ver o código fonte</a></li></ul></div></div>
+            <p class="subtitle lead"><strong>Minicurso - Introdução ao Quarto</strong></p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autor</div>
+      <div class="quarto-title-meta-contents">
+               <p>Ariane Hayana </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">15/04/2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#conjunto-de-dados-iris" id="toc-conjunto-de-dados-iris" class="nav-link active" data-scroll-target="#conjunto-de-dados-iris">Conjunto de dados: Iris</a>
+  <ul class="collapse">
+  <li><a href="#inserindo-código-do-r-em-linha-de-texto" id="toc-inserindo-código-do-r-em-linha-de-texto" class="nav-link" data-scroll-target="#inserindo-código-do-r-em-linha-de-texto">Inserindo código do R em linha de texto</a></li>
+  <li><a href="#visualizações" id="toc-visualizações" class="nav-link" data-scroll-target="#visualizações">Visualizações</a></li>
+  <li><a href="#tabela-descritiva-com-pacote-summarytools" id="toc-tabela-descritiva-com-pacote-summarytools" class="nav-link" data-scroll-target="#tabela-descritiva-com-pacote-summarytools">Tabela descritiva com pacote <code>summarytools</code></a></li>
+  <li><a href="#vídeos-no-relatório-quarto" id="toc-vídeos-no-relatório-quarto" class="nav-link" data-scroll-target="#vídeos-no-relatório-quarto">Vídeos no relatório Quarto</a></li>
+  <li><a href="#anotações-em-códigos" id="toc-anotações-em-códigos" class="nav-link" data-scroll-target="#anotações-em-códigos">Anotações em códigos</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+<div class="cell">
+<div class="cell-output-display">
+<img src="data:image/png;base64,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" alt="logo" style="position:absolute; top:0; left:20px; padding:30px;">
+</div>
+</div>
+<section id="conjunto-de-dados-iris" class="level1 page-columns page-full">
+<h1>Conjunto de dados: Iris</h1>
+<p>O conjunto de dados consiste em 50 amostras de cada uma das três espécies de <em>Iris</em> ( <em>Iris setosa</em>, <em>Iris virginica</em> e <em>Iris versicolor</em>). Quatro variáveis foram medidas em cada amostra: o comprimento e a largura das sépalas e pétalas, em centímetros.</p>
+<p>Fonte: <a href="https://pt.wikipedia.org/wiki/Conjunto_de_dados_flor_Iris">Wikipédia</a></p>
+<p>Os dados podem ser consultados na guia <em>Tabela</em>, bem como as imagens das flores:</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Tabela</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Setosa</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Versicolor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false" href="">Virginica</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  reactable<span class="sc">::</span><span class="fu">reactable</span>(<span class="at">groupBy =</span> <span class="st">"Species"</span>, <span class="co"># Agrupando pela coluna 'Species'</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">searchable =</span> <span class="cn">TRUE</span>, <span class="co"># Inserindo uma busca na tabela</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">outlined =</span> <span class="cn">TRUE</span>) <span class="co"># Linhas na tabela</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-d70fed17dc238a041fcf" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-d70fed17dc238a041fcf">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Sepal.Length":[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9,5.4,4.8,4.8,4.3,5.8,5.7,5.4,5.1,5.7,5.1,5.4,5.1,4.6,5.1,4.8,5,5,5.2,5.2,4.7,4.8,5.4,5.2,5.5,4.9,5,5.5,4.9,4.4,5.1,5,4.5,4.4,5,5.1,4.8,5.1,4.6,5.3,5,7,6.4,6.9,5.5,6.5,5.7,6.3,4.9,6.6,5.2,5,5.9,6,6.1,5.6,6.7,5.6,5.8,6.2,5.6,5.9,6.1,6.3,6.1,6.4,6.6,6.8,6.7,6,5.7,5.5,5.5,5.8,6,5.4,6,6.7,6.3,5.6,5.5,5.5,6.1,5.8,5,5.6,5.7,5.7,6.2,5.1,5.7,6.3,5.8,7.1,6.3,6.5,7.6,4.9,7.3,6.7,7.2,6.5,6.4,6.8,5.7,5.8,6.4,6.5,7.7,7.7,6,6.9,5.6,7.7,6.3,6.7,7.2,6.2,6.1,6.4,7.2,7.4,7.9,6.4,6.3,6.1,7.7,6.3,6.4,6,6.9,6.7,6.9,5.8,6.8,6.7,6.7,6.3,6.5,6.2,5.9],"Sepal.Width":[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1,3.7,3.4,3,3,4,4.4,3.9,3.5,3.8,3.8,3.4,3.7,3.6,3.3,3.4,3,3.4,3.5,3.4,3.2,3.1,3.4,4.1,4.2,3.1,3.2,3.5,3.6,3,3.4,3.5,2.3,3.2,3.5,3.8,3,3.8,3.2,3.7,3.3,3.2,3.2,3.1,2.3,2.8,2.8,3.3,2.4,2.9,2.7,2,3,2.2,2.9,2.9,3.1,3,2.7,2.2,2.5,3.2,2.8,2.5,2.8,2.9,3,2.8,3,2.9,2.6,2.4,2.4,2.7,2.7,3,3.4,3.1,2.3,3,2.5,2.6,3,2.6,2.3,2.7,3,2.9,2.9,2.5,2.8,3.3,2.7,3,2.9,3,3,2.5,2.9,2.5,3.6,3.2,2.7,3,2.5,2.8,3.2,3,3.8,2.6,2.2,3.2,2.8,2.8,2.7,3.3,3.2,2.8,3,2.8,3,2.8,3.8,2.8,2.8,2.6,3,3.4,3.1,3,3.1,3.1,3.1,2.7,3.2,3.3,3,2.5,3,3.4,3],"Petal.Length":[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5,1.5,1.6,1.4,1.1,1.2,1.5,1.3,1.4,1.7,1.5,1.7,1.5,1,1.7,1.9,1.6,1.6,1.5,1.4,1.6,1.6,1.5,1.5,1.4,1.5,1.2,1.3,1.4,1.3,1.5,1.3,1.3,1.3,1.6,1.9,1.4,1.6,1.4,1.5,1.4,4.7,4.5,4.9,4,4.6,4.5,4.7,3.3,4.6,3.9,3.5,4.2,4,4.7,3.6,4.4,4.5,4.1,4.5,3.9,4.8,4,4.9,4.7,4.3,4.4,4.8,5,4.5,3.5,3.8,3.7,3.9,5.1,4.5,4.5,4.7,4.4,4.1,4,4.4,4.6,4,3.3,4.2,4.2,4.2,4.3,3,4.1,6,5.1,5.9,5.6,5.8,6.6,4.5,6.3,5.8,6.1,5.1,5.3,5.5,5,5.1,5.3,5.5,6.7,6.9,5,5.7,4.9,6.7,4.9,5.7,6,4.8,4.9,5.6,5.8,6.1,6.4,5.6,5.1,5.6,6.1,5.6,5.5,4.8,5.4,5.6,5.1,5.1,5.9,5.7,5.2,5,5.2,5.4,5.1],"Petal.Width":[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1,0.2,0.2,0.1,0.1,0.2,0.4,0.4,0.3,0.3,0.3,0.2,0.4,0.2,0.5,0.2,0.2,0.4,0.2,0.2,0.2,0.2,0.4,0.1,0.2,0.2,0.2,0.2,0.1,0.2,0.2,0.3,0.3,0.2,0.6,0.4,0.3,0.2,0.2,0.2,0.2,1.4,1.5,1.5,1.3,1.5,1.3,1.6,1,1.3,1.4,1,1.5,1,1.4,1.3,1.4,1.5,1,1.5,1.1,1.8,1.3,1.5,1.2,1.3,1.4,1.4,1.7,1.5,1,1.1,1,1.2,1.6,1.5,1.6,1.5,1.3,1.3,1.3,1.2,1.4,1.2,1,1.3,1.2,1.3,1.3,1.1,1.3,2.5,1.9,2.1,1.8,2.2,2.1,1.7,1.8,1.8,2.5,2,1.9,2.1,2,2.4,2.3,1.8,2.2,2.3,1.5,2.3,2,2,1.8,2.1,1.8,1.8,1.8,2.1,1.6,1.9,2,2.2,1.5,1.4,2.3,2.4,1.8,1.8,2.1,2.4,2.3,1.9,2.3,2.5,2.3,1.9,2,2.3,1.8],"Species":["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica"]},"columns":[{"id":"Sepal.Length","name":"Sepal.Length","type":"numeric"},{"id":"Sepal.Width","name":"Sepal.Width","type":"numeric"},{"id":"Petal.Length","name":"Petal.Length","type":"numeric"},{"id":"Petal.Width","name":"Petal.Width","type":"numeric"},{"id":"Species","name":"Species","type":"factor"}],"groupBy":["Species"],"searchable":true,"outlined":true,"dataKey":"1980abf4c53c6ff35ad17d6d5d0650a0"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Iris setosa](img/setosa.png)</span>{fig-align="center" width="300"}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/setosa.png" class="img-fluid figure-img" width="300"></p>
+<p></p><figcaption class="figure-caption">Iris setosa</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="sourceCode" id="cb3"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Iris versicolor](img/versicolor.png)</span>{fig-align="center" width="304"}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/versicolor.png" class="img-fluid figure-img" width="304"></p>
+<p></p><figcaption class="figure-caption">Iris versicolor</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="sourceCode" id="cb4"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Iris virginica](img/virginica.png)</span>{fig-align="center" width="300"}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/virginica.png" class="img-fluid figure-img" width="300"></p>
+<p></p><figcaption class="figure-caption">Iris virginica</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<section id="inserindo-código-do-r-em-linha-de-texto" class="level3">
+<h3 class="anchored" data-anchor-id="inserindo-código-do-r-em-linha-de-texto">Inserindo código do R em linha de texto</h3>
+<p>Você pode automatizar a apresentação de seus resultados no texto:</p>
+<blockquote class="blockquote">
+<p>O <em>dataset</em> iris tem 5 colunas e 150 linhas. As variáveis do <em>dataset</em> são <em>Sepal.Length, Sepal.Width, Petal.Length, Petal.Width, Species</em>.</p>
+</blockquote>
+</section>
+<section id="visualizações" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="visualizações">Visualizações</h3>
+<p>Podemos gerar uma matriz de gráficos de dispersão interativa usando a biblioteca <code>JavaScript D3</code> do pacote <code>pairsD3</code> <span class="citation" data-cites="pairsD3">(<a href="#ref-pairsD3" role="doc-biblioref">Tarr e Bostock 2022</a>)</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-pairsD3" class="csl-entry" role="doc-biblioentry">
+Tarr, Garth, e Mike Bostock. 2022. <span>"pairsD3: D3 Scatterplot Matrices"</span>. <a href="https://CRAN.R-project.org/package=pairsD3">https://CRAN.R-project.org/package=pairsD3</a>.
+</div></div><div class="cell">
+<details>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pairsD3)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pairsD3</span>(iris[,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">group=</span>iris[,<span class="dv">5</span>])</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="pairsD3 html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-5adccfd084aac55c068f" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-5adccfd084aac55c068f">{"x":{"data":{"Sepal.Length":[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9,5.4,4.8,4.8,4.3,5.8,5.7,5.4,5.1,5.7,5.1,5.4,5.1,4.6,5.1,4.8,5,5,5.2,5.2,4.7,4.8,5.4,5.2,5.5,4.9,5,5.5,4.9,4.4,5.1,5,4.5,4.4,5,5.1,4.8,5.1,4.6,5.3,5,7,6.4,6.9,5.5,6.5,5.7,6.3,4.9,6.6,5.2,5,5.9,6,6.1,5.6,6.7,5.6,5.8,6.2,5.6,5.9,6.1,6.3,6.1,6.4,6.6,6.8,6.7,6,5.7,5.5,5.5,5.8,6,5.4,6,6.7,6.3,5.6,5.5,5.5,6.1,5.8,5,5.6,5.7,5.7,6.2,5.1,5.7,6.3,5.8,7.1,6.3,6.5,7.6,4.9,7.3,6.7,7.2,6.5,6.4,6.8,5.7,5.8,6.4,6.5,7.7,7.7,6,6.9,5.6,7.7,6.3,6.7,7.2,6.2,6.1,6.4,7.2,7.4,7.9,6.4,6.3,6.1,7.7,6.3,6.4,6,6.9,6.7,6.9,5.8,6.8,6.7,6.7,6.3,6.5,6.2,5.9],"Sepal.Width":[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1,3.7,3.4,3,3,4,4.4,3.9,3.5,3.8,3.8,3.4,3.7,3.6,3.3,3.4,3,3.4,3.5,3.4,3.2,3.1,3.4,4.1,4.2,3.1,3.2,3.5,3.6,3,3.4,3.5,2.3,3.2,3.5,3.8,3,3.8,3.2,3.7,3.3,3.2,3.2,3.1,2.3,2.8,2.8,3.3,2.4,2.9,2.7,2,3,2.2,2.9,2.9,3.1,3,2.7,2.2,2.5,3.2,2.8,2.5,2.8,2.9,3,2.8,3,2.9,2.6,2.4,2.4,2.7,2.7,3,3.4,3.1,2.3,3,2.5,2.6,3,2.6,2.3,2.7,3,2.9,2.9,2.5,2.8,3.3,2.7,3,2.9,3,3,2.5,2.9,2.5,3.6,3.2,2.7,3,2.5,2.8,3.2,3,3.8,2.6,2.2,3.2,2.8,2.8,2.7,3.3,3.2,2.8,3,2.8,3,2.8,3.8,2.8,2.8,2.6,3,3.4,3.1,3,3.1,3.1,3.1,2.7,3.2,3.3,3,2.5,3,3.4,3],"Petal.Length":[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5,1.5,1.6,1.4,1.1,1.2,1.5,1.3,1.4,1.7,1.5,1.7,1.5,1,1.7,1.9,1.6,1.6,1.5,1.4,1.6,1.6,1.5,1.5,1.4,1.5,1.2,1.3,1.4,1.3,1.5,1.3,1.3,1.3,1.6,1.9,1.4,1.6,1.4,1.5,1.4,4.7,4.5,4.9,4,4.6,4.5,4.7,3.3,4.6,3.9,3.5,4.2,4,4.7,3.6,4.4,4.5,4.1,4.5,3.9,4.8,4,4.9,4.7,4.3,4.4,4.8,5,4.5,3.5,3.8,3.7,3.9,5.1,4.5,4.5,4.7,4.4,4.1,4,4.4,4.6,4,3.3,4.2,4.2,4.2,4.3,3,4.1,6,5.1,5.9,5.6,5.8,6.6,4.5,6.3,5.8,6.1,5.1,5.3,5.5,5,5.1,5.3,5.5,6.7,6.9,5,5.7,4.9,6.7,4.9,5.7,6,4.8,4.9,5.6,5.8,6.1,6.4,5.6,5.1,5.6,6.1,5.6,5.5,4.8,5.4,5.6,5.1,5.1,5.9,5.7,5.2,5,5.2,5.4,5.1],"Petal.Width":[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1,0.2,0.2,0.1,0.1,0.2,0.4,0.4,0.3,0.3,0.3,0.2,0.4,0.2,0.5,0.2,0.2,0.4,0.2,0.2,0.2,0.2,0.4,0.1,0.2,0.2,0.2,0.2,0.1,0.2,0.2,0.3,0.3,0.2,0.6,0.4,0.3,0.2,0.2,0.2,0.2,1.4,1.5,1.5,1.3,1.5,1.3,1.6,1,1.3,1.4,1,1.5,1,1.4,1.3,1.4,1.5,1,1.5,1.1,1.8,1.3,1.5,1.2,1.3,1.4,1.4,1.7,1.5,1,1.1,1,1.2,1.6,1.5,1.6,1.5,1.3,1.3,1.3,1.2,1.4,1.2,1,1.3,1.2,1.3,1.3,1.1,1.3,2.5,1.9,2.1,1.8,2.2,2.1,1.7,1.8,1.8,2.5,2,1.9,2.1,2,2.4,2.3,1.8,2.2,2.3,1.5,2.3,2,2,1.8,2.1,1.8,1.8,1.8,2.1,1.6,1.9,2,2.2,1.5,1.4,2.3,2.4,1.8,1.8,2.1,2.4,2.3,1.9,2.3,2.5,2.3,1.9,2,2.3,1.8]},"group":["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica"],"alldata":{"Sepal.Length":[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9,5.4,4.8,4.8,4.3,5.8,5.7,5.4,5.1,5.7,5.1,5.4,5.1,4.6,5.1,4.8,5,5,5.2,5.2,4.7,4.8,5.4,5.2,5.5,4.9,5,5.5,4.9,4.4,5.1,5,4.5,4.4,5,5.1,4.8,5.1,4.6,5.3,5,7,6.4,6.9,5.5,6.5,5.7,6.3,4.9,6.6,5.2,5,5.9,6,6.1,5.6,6.7,5.6,5.8,6.2,5.6,5.9,6.1,6.3,6.1,6.4,6.6,6.8,6.7,6,5.7,5.5,5.5,5.8,6,5.4,6,6.7,6.3,5.6,5.5,5.5,6.1,5.8,5,5.6,5.7,5.7,6.2,5.1,5.7,6.3,5.8,7.1,6.3,6.5,7.6,4.9,7.3,6.7,7.2,6.5,6.4,6.8,5.7,5.8,6.4,6.5,7.7,7.7,6,6.9,5.6,7.7,6.3,6.7,7.2,6.2,6.1,6.4,7.2,7.4,7.9,6.4,6.3,6.1,7.7,6.3,6.4,6,6.9,6.7,6.9,5.8,6.8,6.7,6.7,6.3,6.5,6.2,5.9],"Sepal.Width":[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1,3.7,3.4,3,3,4,4.4,3.9,3.5,3.8,3.8,3.4,3.7,3.6,3.3,3.4,3,3.4,3.5,3.4,3.2,3.1,3.4,4.1,4.2,3.1,3.2,3.5,3.6,3,3.4,3.5,2.3,3.2,3.5,3.8,3,3.8,3.2,3.7,3.3,3.2,3.2,3.1,2.3,2.8,2.8,3.3,2.4,2.9,2.7,2,3,2.2,2.9,2.9,3.1,3,2.7,2.2,2.5,3.2,2.8,2.5,2.8,2.9,3,2.8,3,2.9,2.6,2.4,2.4,2.7,2.7,3,3.4,3.1,2.3,3,2.5,2.6,3,2.6,2.3,2.7,3,2.9,2.9,2.5,2.8,3.3,2.7,3,2.9,3,3,2.5,2.9,2.5,3.6,3.2,2.7,3,2.5,2.8,3.2,3,3.8,2.6,2.2,3.2,2.8,2.8,2.7,3.3,3.2,2.8,3,2.8,3,2.8,3.8,2.8,2.8,2.6,3,3.4,3.1,3,3.1,3.1,3.1,2.7,3.2,3.3,3,2.5,3,3.4,3],"Petal.Length":[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5,1.5,1.6,1.4,1.1,1.2,1.5,1.3,1.4,1.7,1.5,1.7,1.5,1,1.7,1.9,1.6,1.6,1.5,1.4,1.6,1.6,1.5,1.5,1.4,1.5,1.2,1.3,1.4,1.3,1.5,1.3,1.3,1.3,1.6,1.9,1.4,1.6,1.4,1.5,1.4,4.7,4.5,4.9,4,4.6,4.5,4.7,3.3,4.6,3.9,3.5,4.2,4,4.7,3.6,4.4,4.5,4.1,4.5,3.9,4.8,4,4.9,4.7,4.3,4.4,4.8,5,4.5,3.5,3.8,3.7,3.9,5.1,4.5,4.5,4.7,4.4,4.1,4,4.4,4.6,4,3.3,4.2,4.2,4.2,4.3,3,4.1,6,5.1,5.9,5.6,5.8,6.6,4.5,6.3,5.8,6.1,5.1,5.3,5.5,5,5.1,5.3,5.5,6.7,6.9,5,5.7,4.9,6.7,4.9,5.7,6,4.8,4.9,5.6,5.8,6.1,6.4,5.6,5.1,5.6,6.1,5.6,5.5,4.8,5.4,5.6,5.1,5.1,5.9,5.7,5.2,5,5.2,5.4,5.1],"Petal.Width":[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1,0.2,0.2,0.1,0.1,0.2,0.4,0.4,0.3,0.3,0.3,0.2,0.4,0.2,0.5,0.2,0.2,0.4,0.2,0.2,0.2,0.2,0.4,0.1,0.2,0.2,0.2,0.2,0.1,0.2,0.2,0.3,0.3,0.2,0.6,0.4,0.3,0.2,0.2,0.2,0.2,1.4,1.5,1.5,1.3,1.5,1.3,1.6,1,1.3,1.4,1,1.5,1,1.4,1.3,1.4,1.5,1,1.5,1.1,1.8,1.3,1.5,1.2,1.3,1.4,1.4,1.7,1.5,1,1.1,1,1.2,1.6,1.5,1.6,1.5,1.3,1.3,1.3,1.2,1.4,1.2,1,1.3,1.2,1.3,1.3,1.1,1.3,2.5,1.9,2.1,1.8,2.2,2.1,1.7,1.8,1.8,2.5,2,1.9,2.1,2,2.4,2.3,1.8,2.2,2.3,1.5,2.3,2,2,1.8,2.1,1.8,1.8,1.8,2.1,1.6,1.9,2,2.2,1.5,1.4,2.3,2.4,1.8,1.8,2.1,2.4,2.3,1.9,2.3,2.5,2.3,1.9,2,2.3,1.8],"groupval":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],"group":["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","versicolor","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica","virginica"],"tooltip":["1 <br/> setosa","2 <br/> setosa","3 <br/> setosa","4 <br/> setosa","5 <br/> setosa","6 <br/> setosa","7 <br/> setosa","8 <br/> setosa","9 <br/> setosa","10 <br/> setosa","11 <br/> setosa","12 <br/> setosa","13 <br/> setosa","14 <br/> setosa","15 <br/> setosa","16 <br/> setosa","17 <br/> setosa","18 <br/> setosa","19 <br/> setosa","20 <br/> setosa","21 <br/> setosa","22 <br/> setosa","23 <br/> setosa","24 <br/> setosa","25 <br/> setosa","26 <br/> setosa","27 <br/> setosa","28 <br/> setosa","29 <br/> setosa","30 <br/> setosa","31 <br/> setosa","32 <br/> setosa","33 <br/> setosa","34 <br/> setosa","35 <br/> setosa","36 <br/> setosa","37 <br/> setosa","38 <br/> setosa","39 <br/> setosa","40 <br/> setosa","41 <br/> setosa","42 <br/> setosa","43 <br/> setosa","44 <br/> setosa","45 <br/> setosa","46 <br/> setosa","47 <br/> setosa","48 <br/> setosa","49 <br/> setosa","50 <br/> setosa","51 <br/> versicolor","52 <br/> versicolor","53 <br/> versicolor","54 <br/> versicolor","55 <br/> versicolor","56 <br/> versicolor","57 <br/> versicolor","58 <br/> versicolor","59 <br/> versicolor","60 <br/> versicolor","61 <br/> versicolor","62 <br/> versicolor","63 <br/> versicolor","64 <br/> versicolor","65 <br/> versicolor","66 <br/> versicolor","67 <br/> versicolor","68 <br/> versicolor","69 <br/> versicolor","70 <br/> versicolor","71 <br/> versicolor","72 <br/> versicolor","73 <br/> versicolor","74 <br/> versicolor","75 <br/> versicolor","76 <br/> versicolor","77 <br/> versicolor","78 <br/> versicolor","79 <br/> versicolor","80 <br/> versicolor","81 <br/> versicolor","82 <br/> versicolor","83 <br/> versicolor","84 <br/> versicolor","85 <br/> versicolor","86 <br/> versicolor","87 <br/> versicolor","88 <br/> versicolor","89 <br/> versicolor","90 <br/> versicolor","91 <br/> versicolor","92 <br/> versicolor","93 <br/> versicolor","94 <br/> versicolor","95 <br/> versicolor","96 <br/> versicolor","97 <br/> versicolor","98 <br/> versicolor","99 <br/> versicolor","100 <br/> versicolor","101 <br/> virginica","102 <br/> virginica","103 <br/> virginica","104 <br/> virginica","105 <br/> virginica","106 <br/> virginica","107 <br/> virginica","108 <br/> virginica","109 <br/> virginica","110 <br/> virginica","111 <br/> virginica","112 <br/> virginica","113 <br/> virginica","114 <br/> virginica","115 <br/> virginica","116 <br/> virginica","117 <br/> virginica","118 <br/> virginica","119 <br/> virginica","120 <br/> virginica","121 <br/> virginica","122 <br/> virginica","123 <br/> virginica","124 <br/> virginica","125 <br/> virginica","126 <br/> virginica","127 <br/> virginica","128 <br/> virginica","129 <br/> virginica","130 <br/> virginica","131 <br/> virginica","132 <br/> virginica","133 <br/> virginica","134 <br/> virginica","135 <br/> virginica","136 <br/> virginica","137 <br/> virginica","138 <br/> virginica","139 <br/> virginica","140 <br/> virginica","141 <br/> virginica","142 <br/> virginica","143 <br/> virginica","144 <br/> virginica","145 <br/> virginica","146 <br/> virginica","147 <br/> virginica","148 <br/> virginica","149 <br/> virginica","150 <br/> virginica"]},"n":150,"p":4,"labels":["Sepal.Length","Sepal.Width","Petal.Length","Petal.Width"],"settings":{"width":null,"height":null,"col":["#E41A1C","#377EB8","#4DAF4A"],"cex":3,"opacity":0.9,"diag":false},"leftmar":35,"topmar":2},"evals":[],"jsHooks":[]}</script>
+<p>Matriz interativa - Iris</p>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(iris, </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Species,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span>  Sepal.Length)) <span class="sc">+</span> </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> Species)) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">caption =</span> <span class="st">"Elaborado por: Ariane Hayana"</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Espécies"</span>) <span class="sc">+</span> </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Sepal Length"</span>) <span class="sc">+</span> </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>();plot</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="relatorio_html_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="480"></p>
+<p></p><figcaption class="figure-caption">Boxplot estático.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>plotly<span class="sc">::</span><span class="fu">ggplotly</span>(plot)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-15f31c155fd995e2494c" style="width:100%;height:390px;"></div>
+<script type="application/json" data-for="htmlwidget-15f31c155fd995e2494c">{"x":{"data":[{"x":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"y":[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9,5.4,4.8,4.8,4.3,5.8,5.7,5.4,5.1,5.7,5.1,5.4,5.1,4.6,5.1,4.8,5,5,5.2,5.2,4.7,4.8,5.4,5.2,5.5,4.9,5,5.5,4.9,4.4,5.1,5,4.5,4.4,5,5.1,4.8,5.1,4.6,5.3,5],"hoverinfo":"y","type":"box","fillcolor":"rgba(248,118,109,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(51,51,51,1)","width":1.88976377952756},"name":"setosa","legendgroup":"setosa","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],"y":[7,6.4,6.9,5.5,6.5,5.7,6.3,4.9,6.6,5.2,5,5.9,6,6.1,5.6,6.7,5.6,5.8,6.2,5.6,5.9,6.1,6.3,6.1,6.4,6.6,6.8,6.7,6,5.7,5.5,5.5,5.8,6,5.4,6,6.7,6.3,5.6,5.5,5.5,6.1,5.8,5,5.6,5.7,5.7,6.2,5.1,5.7],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,186,56,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(51,51,51,1)","width":1.88976377952756},"name":"versicolor","legendgroup":"versicolor","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3],"y":[6.3,5.8,7.1,6.3,6.5,7.6,4.9,7.3,6.7,7.2,6.5,6.4,6.8,5.7,5.8,6.4,6.5,7.7,7.7,6,6.9,5.6,7.7,6.3,6.7,7.2,6.2,6.1,6.4,7.2,7.4,7.9,6.4,6.3,6.1,7.7,6.3,6.4,6,6.9,6.7,6.9,5.8,6.8,6.7,6.7,6.3,6.5,6.2,5.9],"hoverinfo":"y","type":"box","fillcolor":"rgba(97,156,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(51,51,51,1)","width":1.88976377952756},"name":"virginica","legendgroup":"virginica","showlegend":true,"xaxis":"x","yaxis":"y","frame":null}],"layout":{"margin":{"t":28.1765601217656,"r":7.30593607305936,"b":42.130898021309,"l":31.4155251141553},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,3.6],"tickmode":"array","ticktext":["setosa","versicolor","virginica"],"tickvals":[1,2,3],"categoryorder":"array","categoryarray":["setosa","versicolor","virginica"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Espécies","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[4.12,8.08],"tickmode":"array","ticktext":["5","6","7","8"],"tickvals":[5,6,7,8],"categoryorder":"array","categoryarray":["5","6","7","8"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Sepal Length","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"title":{"text":"Species","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"173617d2d23":{"x":{},"y":{},"fill":{},"type":"box"}},"cur_data":"173617d2d23","visdat":{"173617d2d23":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>Boxplot dinâmico.</p>
+</div>
+</div>
+</section>
+<section id="tabela-descritiva-com-pacote-summarytools" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="tabela-descritiva-com-pacote-summarytools">Tabela descritiva com pacote <code>summarytools</code></h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(summarytools) </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">descr</span>(iris) <span class="sc">|&gt;</span> </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="at">digits =</span> <span class="dv">3</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Petal.Length</th>
+<th style="text-align: right;">Petal.Width</th>
+<th style="text-align: right;">Sepal.Length</th>
+<th style="text-align: right;">Sepal.Width</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mean</td>
+<td style="text-align: right;">3.758</td>
+<td style="text-align: right;">1.199</td>
+<td style="text-align: right;">5.843</td>
+<td style="text-align: right;">3.057</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Std.Dev</td>
+<td style="text-align: right;">1.765</td>
+<td style="text-align: right;">0.762</td>
+<td style="text-align: right;">0.828</td>
+<td style="text-align: right;">0.436</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Min</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">0.100</td>
+<td style="text-align: right;">4.300</td>
+<td style="text-align: right;">2.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q1</td>
+<td style="text-align: right;">1.600</td>
+<td style="text-align: right;">0.300</td>
+<td style="text-align: right;">5.100</td>
+<td style="text-align: right;">2.800</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Median</td>
+<td style="text-align: right;">4.350</td>
+<td style="text-align: right;">1.300</td>
+<td style="text-align: right;">5.800</td>
+<td style="text-align: right;">3.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q3</td>
+<td style="text-align: right;">5.100</td>
+<td style="text-align: right;">1.800</td>
+<td style="text-align: right;">6.400</td>
+<td style="text-align: right;">3.300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Max</td>
+<td style="text-align: right;">6.900</td>
+<td style="text-align: right;">2.500</td>
+<td style="text-align: right;">7.900</td>
+<td style="text-align: right;">4.400</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MAD</td>
+<td style="text-align: right;">1.853</td>
+<td style="text-align: right;">1.038</td>
+<td style="text-align: right;">1.038</td>
+<td style="text-align: right;">0.445</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">IQR</td>
+<td style="text-align: right;">3.500</td>
+<td style="text-align: right;">1.500</td>
+<td style="text-align: right;">1.300</td>
+<td style="text-align: right;">0.500</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CV</td>
+<td style="text-align: right;">0.470</td>
+<td style="text-align: right;">0.636</td>
+<td style="text-align: right;">0.142</td>
+<td style="text-align: right;">0.143</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Skewness</td>
+<td style="text-align: right;">-0.269</td>
+<td style="text-align: right;">-0.101</td>
+<td style="text-align: right;">0.309</td>
+<td style="text-align: right;">0.313</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SE.Skewness</td>
+<td style="text-align: right;">0.198</td>
+<td style="text-align: right;">0.198</td>
+<td style="text-align: right;">0.198</td>
+<td style="text-align: right;">0.198</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kurtosis</td>
+<td style="text-align: right;">-1.417</td>
+<td style="text-align: right;">-1.358</td>
+<td style="text-align: right;">-0.606</td>
+<td style="text-align: right;">0.139</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">N.Valid</td>
+<td style="text-align: right;">150.000</td>
+<td style="text-align: right;">150.000</td>
+<td style="text-align: right;">150.000</td>
+<td style="text-align: right;">150.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pct.Valid</td>
+<td style="text-align: right;">100.000</td>
+<td style="text-align: right;">100.000</td>
+<td style="text-align: right;">100.000</td>
+<td style="text-align: right;">100.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul>
+<li>Fonte: <span class="citation" data-cites="summarytools">Comtois (<a href="#ref-summarytools" role="doc-biblioref">2022</a>)</span>.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="ref-summarytools" class="csl-entry" role="doc-biblioentry">
+Comtois, Dominic. 2022. <span>"summarytools: Tools to Quickly and Neatly Summarize Data"</span>. <a href="https://CRAN.R-project.org/package=summarytools">https://CRAN.R-project.org/package=summarytools</a>.
+</div></div></section>
+<section id="vídeos-no-relatório-quarto" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="vídeos-no-relatório-quarto">Vídeos no relatório Quarto</h2>
+<p>Para inserir vídeos, após feita as instalações necessárias, basta inserir o link do Youtube na sintaxe a seguir:</p>
+<div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>{{&lt; video https://youtu.be/tE88RxsUOuc &gt;}}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>O resultado será:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/tE88RxsUOuc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Para alterar o tamanho do vídeo, basta inserir <code>width="xx"</code> (largura) <code>height="xx"</code> (altura), como no exemplo:</p>
+<div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>{{&lt; video https://youtu.be/tE88RxsUOuc width="225" height="170" &gt;}}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Para mais detalhes sobre a utilização de vídeos, clique <a href="https://quarto.org/docs/authoring/videos.html">aqui</a>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>O resultado com as dimensões <code>width="225" e height="170"</code> será assim:</p>
+<div class="quarto-video"><iframe src="https://www.youtube.com/embed/tE88RxsUOuc" width="225" height="170" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div></div></section>
+<section id="anotações-em-códigos" class="level2">
+<h2 class="anchored" data-anchor-id="anotações-em-códigos">Anotações em códigos</h2>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Necessário instalar Quarto v1.3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O <code>Code Annotation</code> é um recurso do Quarto v1.3. Se você quiser usar esse recurso, faça o download e instale o Quarto v1.3 antes de continuar.</p>
+<p>Instale a versão de pré-lançamento do Quarto <a href="https://quarto.org/docs/download/prerelease.html">aqui</a>. Vale ressaltar que o pré-lançamento destina-se a fins de <em>teste</em>.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dados)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reactable)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>dados_gapminder <span class="sc">|&gt;</span>                                  <span class="co"># &lt;1&gt; </span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(continente, pais, ano, pib_per_capita) <span class="sc">|&gt;</span>  <span class="co"># &lt;2&gt; </span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">reactable</span>(</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">groupBy =</span> <span class="st">"continente"</span>,                         <span class="co"># &lt;3&gt;</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">searchable =</span> <span class="cn">TRUE</span>,                              <span class="co"># &lt;4&gt;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">outlined =</span> <span class="cn">TRUE</span>,                                <span class="co"># &lt;5&gt;</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">list</span>(<span class="at">ano =</span> <span class="fu">colDef</span>(<span class="at">sortable =</span> <span class="cn">TRUE</span>)))   <span class="co"># &lt;6&gt;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-758a7d5a614428079ba4" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-758a7d5a614428079ba4">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"continente":["Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","África","África","África","África","África","África","África","África","África","África","África","África","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","África","África","África","África","África","África","África","África","África","África","África","África","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","África","África","África","África","África","África","África","África","África","África","África","África","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","África","África","África","África","África","África","África","África","África","África","África","África","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","África","África","África","África","África","África","África","África","África","África","África","África","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","África","África","África","África","África","África","África","África","África","África","África","África","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","África","África","África","África","África","África","África","África","África","África","África","África","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","África","África","África","África","África","África","África","África","África","África","África","África","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","África","África","África","África","África","África","África","África","África","África","África","África","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Oceania","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","África","África","África","África","África","África","África","África","África","África","África","África","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","África","África","África","África","África","África","África","África","África","África","África","África","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","África","África","África","África","África","África","África","África","África","África","África","África","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","África","África","África","África","África","África","África","África","África","África","África","África","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","África","África","África","África","África","África","África","África","África","África","África","África","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","África","África","África","África","África","África","África","África","África","África","África","África","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","África","África","África","África","África","África","África","África","África","África","África","África","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Europa","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Américas","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","Ásia","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África","África"],"pais":["Afeganistão","Afeganistão","Afeganistão","Afeganistão","Afeganistão","Afeganistão","Afeganistão","Afeganistão","Afeganistão","Afeganistão","Afeganistão","Afeganistão","Albânia","Albânia","Albânia","Albânia","Albânia","Albânia","Albânia","Albânia","Albânia","Albânia","Albânia","Albânia","Argélia","Argélia","Argélia","Argélia","Argélia","Argélia","Argélia","Argélia","Argélia","Argélia","Argélia","Argélia","Angola","Angola","Angola","Angola","Angola","Angola","Angola","Angola","Angola","Angola","Angola","Angola","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Austrália","Austrália","Austrália","Austrália","Austrália","Austrália","Austrália","Austrália","Austrália","Austrália","Austrália","Austrália","Áustria","Áustria","Áustria","Áustria","Áustria","Áustria","Áustria","Áustria","Áustria","Áustria","Áustria","Áustria","Bahrein","Bahrein","Bahrein","Bahrein","Bahrein","Bahrein","Bahrein","Bahrein","Bahrein","Bahrein","Bahrein","Bahrein","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bélgica","Bélgica","Bélgica","Bélgica","Bélgica","Bélgica","Bélgica","Bélgica","Bélgica","Bélgica","Bélgica","Bélgica","Benim","Benim","Benim","Benim","Benim","Benim","Benim","Benim","Benim","Benim","Benim","Benim","Bolívia","Bolívia","Bolívia","Bolívia","Bolívia","Bolívia","Bolívia","Bolívia","Bolívia","Bolívia","Bolívia","Bolívia","Bósnia e Herzegovina","Bósnia e Herzegovina","Bósnia e Herzegovina","Bósnia e Herzegovina","Bósnia e Herzegovina","Bósnia e Herzegovina","Bósnia e Herzegovina","Bósnia e Herzegovina","Bósnia e Herzegovina","Bósnia e Herzegovina","Bósnia e Herzegovina","Bósnia e Herzegovina","Botsuana","Botsuana","Botsuana","Botsuana","Botsuana","Botsuana","Botsuana","Botsuana","Botsuana","Botsuana","Botsuana","Botsuana","Brasil","Brasil","Brasil","Brasil","Brasil","Brasil","Brasil","Brasil","Brasil","Brasil","Brasil","Brasil","Bulgária","Bulgária","Bulgária","Bulgária","Bulgária","Bulgária","Bulgária","Bulgária","Bulgária","Bulgária","Bulgária","Bulgária","Burquina Faso","Burquina Faso","Burquina Faso","Burquina Faso","Burquina Faso","Burquina Faso","Burquina Faso","Burquina Faso","Burquina Faso","Burquina Faso","Burquina Faso","Burquina Faso","Burundi","Burundi","Burundi","Burundi","Burundi","Burundi","Burundi","Burundi","Burundi","Burundi","Burundi","Burundi","Camboja","Camboja","Camboja","Camboja","Camboja","Camboja","Camboja","Camboja","Camboja","Camboja","Camboja","Camboja","Camarões","Camarões","Camarões","Camarões","Camarões","Camarões","Camarões","Camarões","Camarões","Camarões","Camarões","Camarões","Canadá","Canadá","Canadá","Canadá","Canadá","Canadá","Canadá","Canadá","Canadá","Canadá","Canadá","Canadá","República Centroafricana","República Centroafricana","República Centroafricana","República Centroafricana","República Centroafricana","República Centroafricana","República Centroafricana","República Centroafricana","República Centroafricana","República Centroafricana","República Centroafricana","República Centroafricana","Chade","Chade","Chade","Chade","Chade","Chade","Chade","Chade","Chade","Chade","Chade","Chade","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","China","China","China","China","China","China","China","China","China","China","China","China","Colômbia","Colômbia","Colômbia","Colômbia","Colômbia","Colômbia","Colômbia","Colômbia","Colômbia","Colômbia","Colômbia","Colômbia","Comores","Comores","Comores","Comores","Comores","Comores","Comores","Comores","Comores","Comores","Comores","Comores","República Democrática do Congo","República Democrática do Congo","República Democrática do Congo","República Democrática do Congo","República Democrática do Congo","República Democrática do Congo","República Democrática do Congo","República Democrática do Congo","República Democrática do Congo","República Democrática do Congo","República Democrática do Congo","República Democrática do Congo","República do Congo","República do Congo","República do Congo","República do Congo","República do Congo","República do Congo","República do Congo","República do Congo","República do Congo","República do Congo","República do Congo","República do Congo","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa de Marfim","Costa de Marfim","Costa de Marfim","Costa de Marfim","Costa de Marfim","Costa de Marfim","Costa de Marfim","Costa de Marfim","Costa de Marfim","Costa de Marfim","Costa de Marfim","Costa de Marfim","Croácia","Croácia","Croácia","Croácia","Croácia","Croácia","Croácia","Croácia","Croácia","Croácia","Croácia","Croácia","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Chéquia","Chéquia","Chéquia","Chéquia","Chéquia","Chéquia","Chéquia","Chéquia","Chéquia","Chéquia","Chéquia","Chéquia","Dinamarca","Dinamarca","Dinamarca","Dinamarca","Dinamarca","Dinamarca","Dinamarca","Dinamarca","Dinamarca","Dinamarca","Dinamarca","Dinamarca","Jibuti","Jibuti","Jibuti","Jibuti","Jibuti","Jibuti","Jibuti","Jibuti","Jibuti","Jibuti","Jibuti","Jibuti","República Dominicana","República Dominicana","República Dominicana","República Dominicana","República Dominicana","República Dominicana","República Dominicana","República Dominicana","República Dominicana","República Dominicana","República Dominicana","República Dominicana","Equador","Equador","Equador","Equador","Equador","Equador","Equador","Equador","Equador","Equador","Equador","Equador","Egito","Egito","Egito","Egito","Egito","Egito","Egito","Egito","Egito","Egito","Egito","Egito","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","Guiné-Equatorial","Guiné-Equatorial","Guiné-Equatorial","Guiné-Equatorial","Guiné-Equatorial","Guiné-Equatorial","Guiné-Equatorial","Guiné-Equatorial","Guiné-Equatorial","Guiné-Equatorial","Guiné-Equatorial","Guiné-Equatorial","Eritreia","Eritreia","Eritreia","Eritreia","Eritreia","Eritreia","Eritreia","Eritreia","Eritreia","Eritreia","Eritreia","Eritreia","Etiópia","Etiópia","Etiópia","Etiópia","Etiópia","Etiópia","Etiópia","Etiópia","Etiópia","Etiópia","Etiópia","Etiópia","Finlândia","Finlândia","Finlândia","Finlândia","Finlândia","Finlândia","Finlândia","Finlândia","Finlândia","Finlândia","Finlândia","Finlândia","França","França","França","França","França","França","França","França","França","França","França","França","Gabão","Gabão","Gabão","Gabão","Gabão","Gabão","Gabão","Gabão","Gabão","Gabão","Gabão","Gabão","Gâmbia","Gâmbia","Gâmbia","Gâmbia","Gâmbia","Gâmbia","Gâmbia","Gâmbia","Gâmbia","Gâmbia","Gâmbia","Gâmbia","Alemanha","Alemanha","Alemanha","Alemanha","Alemanha","Alemanha","Alemanha","Alemanha","Alemanha","Alemanha","Alemanha","Alemanha","Gana","Gana","Gana","Gana","Gana","Gana","Gana","Gana","Gana","Gana","Gana","Gana","Grécia","Grécia","Grécia","Grécia","Grécia","Grécia","Grécia","Grécia","Grécia","Grécia","Grécia","Grécia","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guiné","Guiné","Guiné","Guiné","Guiné","Guiné","Guiné","Guiné","Guiné","Guiné","Guiné","Guiné","Guiné-Bissau","Guiné-Bissau","Guiné-Bissau","Guiné-Bissau","Guiné-Bissau","Guiné-Bissau","Guiné-Bissau","Guiné-Bissau","Guiné-Bissau","Guiné-Bissau","Guiné-Bissau","Guiné-Bissau","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Hong Kong, China","Hong Kong, China","Hong Kong, China","Hong Kong, China","Hong Kong, China","Hong Kong, China","Hong Kong, China","Hong Kong, China","Hong Kong, China","Hong Kong, China","Hong Kong, China","Hong Kong, China","Hungria","Hungria","Hungria","Hungria","Hungria","Hungria","Hungria","Hungria","Hungria","Hungria","Hungria","Hungria","Islândia","Islândia","Islândia","Islândia","Islândia","Islândia","Islândia","Islândia","Islândia","Islândia","Islândia","Islândia","Índia","Índia","Índia","Índia","Índia","Índia","Índia","Índia","Índia","Índia","Índia","Índia","Indonésia","Indonésia","Indonésia","Indonésia","Indonésia","Indonésia","Indonésia","Indonésia","Indonésia","Indonésia","Indonésia","Indonésia","Irã","Irã","Irã","Irã","Irã","Irã","Irã","Irã","Irã","Irã","Irã","Irã","Iraque","Iraque","Iraque","Iraque","Iraque","Iraque","Iraque","Iraque","Iraque","Iraque","Iraque","Iraque","Irlanda","Irlanda","Irlanda","Irlanda","Irlanda","Irlanda","Irlanda","Irlanda","Irlanda","Irlanda","Irlanda","Irlanda","Israel","Israel","Israel","Israel","Israel","Israel","Israel","Israel","Israel","Israel","Israel","Israel","Itália","Itália","Itália","Itália","Itália","Itália","Itália","Itália","Itália","Itália","Itália","Itália","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Japão","Japão","Japão","Japão","Japão","Japão","Japão","Japão","Japão","Japão","Japão","Japão","Jordânia","Jordânia","Jordânia","Jordânia","Jordânia","Jordânia","Jordânia","Jordânia","Jordânia","Jordânia","Jordânia","Jordânia","Quênia","Quênia","Quênia","Quênia","Quênia","Quênia","Quênia","Quênia","Quênia","Quênia","Quênia","Quênia","Coreia, Rep. Dem.","Coreia, Rep. Dem.","Coreia, Rep. Dem.","Coreia, Rep. Dem.","Coreia, Rep. Dem.","Coreia, Rep. Dem.","Coreia, Rep. Dem.","Coreia, Rep. Dem.","Coreia, Rep. Dem.","Coreia, Rep. Dem.","Coreia, Rep. Dem.","Coreia, Rep. Dem.","Coreia, Rep.","Coreia, Rep.","Coreia, Rep.","Coreia, Rep.","Coreia, Rep.","Coreia, Rep.","Coreia, Rep.","Coreia, Rep.","Coreia, Rep.","Coreia, Rep.","Coreia, Rep.","Coreia, Rep.","Kuwaite","Kuwaite","Kuwaite","Kuwaite","Kuwaite","Kuwaite","Kuwaite","Kuwaite","Kuwaite","Kuwaite","Kuwaite","Kuwaite","Líbano","Líbano","Líbano","Líbano","Líbano","Líbano","Líbano","Líbano","Líbano","Líbano","Líbano","Líbano","Lesoto","Lesoto","Lesoto","Lesoto","Lesoto","Lesoto","Lesoto","Lesoto","Lesoto","Lesoto","Lesoto","Lesoto","Libéria","Libéria","Libéria","Libéria","Libéria","Libéria","Libéria","Libéria","Libéria","Libéria","Libéria","Libéria","Líbia","Líbia","Líbia","Líbia","Líbia","Líbia","Líbia","Líbia","Líbia","Líbia","Líbia","Líbia","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Malaui","Malaui","Malaui","Malaui","Malaui","Malaui","Malaui","Malaui","Malaui","Malaui","Malaui","Malaui","Malásia","Malásia","Malásia","Malásia","Malásia","Malásia","Malásia","Malásia","Malásia","Malásia","Malásia","Malásia","Mali","Mali","Mali","Mali","Mali","Mali","Mali","Mali","Mali","Mali","Mali","Mali","Mauritânia","Mauritânia","Mauritânia","Mauritânia","Mauritânia","Mauritânia","Mauritânia","Mauritânia","Mauritânia","Mauritânia","Mauritânia","Mauritânia","Maurício","Maurício","Maurício","Maurício","Maurício","Maurício","Maurício","Maurício","Maurício","Maurício","Maurício","Maurício","México","México","México","México","México","México","México","México","México","México","México","México","Mongólia","Mongólia","Mongólia","Mongólia","Mongólia","Mongólia","Mongólia","Mongólia","Mongólia","Mongólia","Mongólia","Mongólia","Montenegro","Montenegro","Montenegro","Montenegro","Montenegro","Montenegro","Montenegro","Montenegro","Montenegro","Montenegro","Montenegro","Montenegro","Marrocos","Marrocos","Marrocos","Marrocos","Marrocos","Marrocos","Marrocos","Marrocos","Marrocos","Marrocos","Marrocos","Marrocos","Moçambique","Moçambique","Moçambique","Moçambique","Moçambique","Moçambique","Moçambique","Moçambique","Moçambique","Moçambique","Moçambique","Moçambique","Mianmar","Mianmar","Mianmar","Mianmar","Mianmar","Mianmar","Mianmar","Mianmar","Mianmar","Mianmar","Mianmar","Mianmar","Namíbia","Namíbia","Namíbia","Namíbia","Namíbia","Namíbia","Namíbia","Namíbia","Namíbia","Namíbia","Namíbia","Namíbia","Nepal","Nepal","Nepal","Nepal","Nepal","Nepal","Nepal","Nepal","Nepal","Nepal","Nepal","Nepal","Países Baixos","Países Baixos","Países Baixos","Países Baixos","Países Baixos","Países Baixos","Países Baixos","Países Baixos","Países Baixos","Países Baixos","Países Baixos","Países Baixos","Nova Zelândia","Nova Zelândia","Nova Zelândia","Nova Zelândia","Nova Zelândia","Nova Zelândia","Nova Zelândia","Nova Zelândia","Nova Zelândia","Nova Zelândia","Nova Zelândia","Nova Zelândia","Nicarágua","Nicarágua","Nicarágua","Nicarágua","Nicarágua","Nicarágua","Nicarágua","Nicarágua","Nicarágua","Nicarágua","Nicarágua","Nicarágua","Níger","Níger","Níger","Níger","Níger","Níger","Níger","Níger","Níger","Níger","Níger","Níger","Nigéria","Nigéria","Nigéria","Nigéria","Nigéria","Nigéria","Nigéria","Nigéria","Nigéria","Nigéria","Nigéria","Nigéria","Noruega","Noruega","Noruega","Noruega","Noruega","Noruega","Noruega","Noruega","Noruega","Noruega","Noruega","Noruega","Omã","Omã","Omã","Omã","Omã","Omã","Omã","Omã","Omã","Omã","Omã","Omã","Paquistão","Paquistão","Paquistão","Paquistão","Paquistão","Paquistão","Paquistão","Paquistão","Paquistão","Paquistão","Paquistão","Paquistão","Panamá","Panamá","Panamá","Panamá","Panamá","Panamá","Panamá","Panamá","Panamá","Panamá","Panamá","Panamá","Paraguai","Paraguai","Paraguai","Paraguai","Paraguai","Paraguai","Paraguai","Paraguai","Paraguai","Paraguai","Paraguai","Paraguai","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Filipinas","Filipinas","Filipinas","Filipinas","Filipinas","Filipinas","Filipinas","Filipinas","Filipinas","Filipinas","Filipinas","Filipinas","Polônia","Polônia","Polônia","Polônia","Polônia","Polônia","Polônia","Polônia","Polônia","Polônia","Polônia","Polônia","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Porto Rico","Porto Rico","Porto Rico","Porto Rico","Porto Rico","Porto Rico","Porto Rico","Porto Rico","Porto Rico","Porto Rico","Porto Rico","Porto Rico","Reunião","Reunião","Reunião","Reunião","Reunião","Reunião","Reunião","Reunião","Reunião","Reunião","Reunião","Reunião","Romênia","Romênia","Romênia","Romênia","Romênia","Romênia","Romênia","Romênia","Romênia","Romênia","Romênia","Romênia","Ruanda","Ruanda","Ruanda","Ruanda","Ruanda","Ruanda","Ruanda","Ruanda","Ruanda","Ruanda","Ruanda","Ruanda","São Tomé e Príncipe","São Tomé e Príncipe","São Tomé e Príncipe","São Tomé e Príncipe","São Tomé e Príncipe","São Tomé e Príncipe","São Tomé e Príncipe","São Tomé e Príncipe","São Tomé e Príncipe","São Tomé e Príncipe","São Tomé e Príncipe","São Tomé e Príncipe","Arábia Saudita","Arábia Saudita","Arábia Saudita","Arábia Saudita","Arábia Saudita","Arábia Saudita","Arábia Saudita","Arábia Saudita","Arábia Saudita","Arábia Saudita","Arábia Saudita","Arábia Saudita","Senegal","Senegal","Senegal","Senegal","Senegal","Senegal","Senegal","Senegal","Senegal","Senegal","Senegal","Senegal","Sérvia","Sérvia","Sérvia","Sérvia","Sérvia","Sérvia","Sérvia","Sérvia","Sérvia","Sérvia","Sérvia","Sérvia","Serra Leoa","Serra Leoa","Serra Leoa","Serra Leoa","Serra Leoa","Serra Leoa","Serra Leoa","Serra Leoa","Serra Leoa","Serra Leoa","Serra Leoa","Serra Leoa","Singapura","Singapura","Singapura","Singapura","Singapura","Singapura","Singapura","Singapura","Singapura","Singapura","Singapura","Singapura","Eslováquia","Eslováquia","Eslováquia","Eslováquia","Eslováquia","Eslováquia","Eslováquia","Eslováquia","Eslováquia","Eslováquia","Eslováquia","Eslováquia","Eslov\\u00eania","Eslov\\u00eania","Eslov\\u00eania","Eslov\\u00eania","Eslov\\u00eania","Eslov\\u00eania","Eslov\\u00eania","Eslov\\u00eania","Eslov\\u00eania","Eslov\\u00eania","Eslov\\u00eania","Eslov\\u00eania","Somália","Somália","Somália","Somália","Somália","Somália","Somália","Somália","Somália","Somália","Somália","Somália","África do Sul","África do Sul","África do Sul","África do Sul","África do Sul","África do Sul","África do Sul","África do Sul","África do Sul","África do Sul","África do Sul","África do Sul","Espanha","Espanha","Espanha","Espanha","Espanha","Espanha","Espanha","Espanha","Espanha","Espanha","Espanha","Espanha","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Sudão","Sudão","Sudão","Sudão","Sudão","Sudão","Sudão","Sudão","Sudão","Sudão","Sudão","Sudão","Essuatíni","Essuatíni","Essuatíni","Essuatíni","Essuatíni","Essuatíni","Essuatíni","Essuatíni","Essuatíni","Essuatíni","Essuatíni","Essuatíni","Suécia","Suécia","Suécia","Suécia","Suécia","Suécia","Suécia","Suécia","Suécia","Suécia","Suécia","Suécia","Suíça","Suíça","Suíça","Suíça","Suíça","Suíça","Suíça","Suíça","Suíça","Suíça","Suíça","Suíça","Síria","Síria","Síria","Síria","Síria","Síria","Síria","Síria","Síria","Síria","Síria","Síria","Taiwan","Taiwan","Taiwan","Taiwan","Taiwan","Taiwan","Taiwan","Taiwan","Taiwan","Taiwan","Taiwan","Taiwan","Tanzânia","Tanzânia","Tanzânia","Tanzânia","Tanzânia","Tanzânia","Tanzânia","Tanzânia","Tanzânia","Tanzânia","Tanzânia","Tanzânia","Tailândia","Tailândia","Tailândia","Tailândia","Tailândia","Tailândia","Tailândia","Tailândia","Tailândia","Tailândia","Tailândia","Tailândia","Togo","Togo","Togo","Togo","Togo","Togo","Togo","Togo","Togo","Togo","Togo","Togo","Trindade e Tobago","Trindade e Tobago","Trindade e Tobago","Trindade e Tobago","Trindade e Tobago","Trindade e Tobago","Trindade e Tobago","Trindade e Tobago","Trindade e Tobago","Trindade e Tobago","Trindade e Tobago","Trindade e Tobago","Tunísia","Tunísia","Tunísia","Tunísia","Tunísia","Tunísia","Tunísia","Tunísia","Tunísia","Tunísia","Tunísia","Tunísia","Turquia","Turquia","Turquia","Turquia","Turquia","Turquia","Turquia","Turquia","Turquia","Turquia","Turquia","Turquia","Uganda","Uganda","Uganda","Uganda","Uganda","Uganda","Uganda","Uganda","Uganda","Uganda","Uganda","Uganda","Reino Unido","Reino Unido","Reino Unido","Reino Unido","Reino Unido","Reino Unido","Reino Unido","Reino Unido","Reino Unido","Reino Unido","Reino Unido","Reino Unido","Estados Unidos","Estados Unidos","Estados Unidos","Estados Unidos","Estados Unidos","Estados Unidos","Estados Unidos","Estados Unidos","Estados Unidos","Estados Unidos","Estados Unidos","Estados Unidos","Uruguai","Uruguai","Uruguai","Uruguai","Uruguai","Uruguai","Uruguai","Uruguai","Uruguai","Uruguai","Uruguai","Uruguai","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Vietnã","Vietnã","Vietnã","Vietnã","Vietnã","Vietnã","Vietnã","Vietnã","Vietnã","Vietnã","Vietnã","Vietnã","Territórios Palestinos","Territórios Palestinos","Territórios Palestinos","Territórios Palestinos","Territórios Palestinos","Territórios Palestinos","Territórios Palestinos","Territórios Palestinos","Territórios Palestinos","Territórios Palestinos","Territórios Palestinos","Territórios Palestinos","Iêmen","Iêmen","Iêmen","Iêmen","Iêmen","Iêmen","Iêmen","Iêmen","Iêmen","Iêmen","Iêmen","Iêmen","Zâmbia","Zâmbia","Zâmbia","Zâmbia","Zâmbia","Zâmbia","Zâmbia","Zâmbia","Zâmbia","Zâmbia","Zâmbia","Zâmbia","Zimbábue","Zimbábue","Zimbábue","Zimbábue","Zimbábue","Zimbábue","Zimbábue","Zimbábue","Zimbábue","Zimbábue","Zimbábue","Zimbábue"],"ano":[1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007],"pib_per_capita":[779.4453145,820.8530296,853.10071,836.1971382,739.9811058,786.11336,978.0114388,852.3959448,649.3413952,635.341351,726.7340548,974.5803384,1601.056136,1942.284244,2312.888958,2760.196931,3313.422188,3533.00391,3630.880722,3738.932735,2497.437901,3193.054604,4604.211737,5937.029526,2449.008185,3013.976023,2550.81688,3246.991771,4182.663766,4910.416756,5745.160213,5681.358539,5023.216647,4797.295051,5288.040382,6223.367465,3520.610273,3827.940465,4269.276742,5522.776375,5473.288005,3008.647355,2756.953672,2430.208311,2627.845685,2277.140884,2773.287312,4797.231267,5911.315053,6856.856212,7133.166023,8052.953021,9443.038526,10079.02674,8997.897412,9139.671389,9308.41871,10967.28195,8797.640716,12779.37964,10039.59564,10949.64959,12217.22686,14526.12465,16788.62948,18334.19751,19477.00928,21888.88903,23424.76683,26997.93657,30687.75473,34435.36744,6137.076492,8842.59803,10750.72111,12834.6024,16661.6256,19749.4223,21597.08362,23687.82607,27042.01868,29095.92066,32417.60769,36126.4927,9867.084765,11635.79945,12753.27514,14804.6727,18268.65839,19340.10196,19211.14731,18524.02406,19035.57917,20292.01679,23403.55927,29796.04834,684.2441716,661.6374577,686.3415538,721.1860862,630.2336265,659.8772322,676.9818656,751.9794035,837.8101643,972.7700352,1136.39043,1391.253792,8343.105127,9714.960623,10991.20676,13149.04119,16672.14356,19117.97448,20979.84589,22525.56308,25575.57069,27561.19663,30485.88375,33692.60508,1062.7522,959.6010805,949.4990641,1035.831411,1085.796879,1029.161251,1277.897616,1225.85601,1191.207681,1232.975292,1372.877931,1441.284873,2677.326347,2127.686326,2180.972546,2586.886053,2980.331339,3548.097832,3156.510452,2753.69149,2961.699694,3326.143191,3413.26269,3822.137084,973.5331948,1353.989176,1709.683679,2172.352423,2860.16975,3528.481305,4126.613157,4314.114757,2546.781445,4766.355904,6018.975239,7446.298803,851.2411407,918.2325349,983.6539764,1214.709294,2263.611114,3214.857818,4551.14215,6205.88385,7954.111645,8647.142313,11003.60508,12569.85177,2108.944355,2487.365989,3336.585802,3429.864357,4985.711467,6660.118654,7030.835878,7807.095818,6950.283021,7957.980824,8131.212843,9065.800825,2444.286648,3008.670727,4254.337839,5577.0028,6597.494398,7612.240438,8224.191647,8239.854824,6302.623438,5970.38876,7696.777725,10680.79282,543.2552413,617.1834648,722.5120206,794.8265597,854.7359763,743.3870368,807.1985855,912.0631417,931.7527731,946.2949618,1037.645221,1217.032994,339.2964587,379.5646281,355.2032273,412.9775136,464.0995039,556.1032651,559.603231,621.8188189,631.6998778,463.1151478,446.4035126,430.0706916,368.4692856,434.0383364,496.9136476,523.4323142,421.6240257,524.9721832,624.4754784,683.8955732,682.3031755,734.28517,896.2260153,1713.778686,1172.667655,1313.048099,1399.607441,1508.453148,1684.146528,1783.432873,2367.983282,2602.664206,1793.163278,1694.337469,1934.011449,2042.09524,11367.16112,12489.95006,13462.48555,16076.58803,18970.57086,22090.88306,22898.79214,26626.51503,26342.88426,28954.92589,33328.96507,36319.23501,1071.310713,1190.844328,1193.068753,1136.056615,1070.013275,1109.374338,956.7529907,844.8763504,747.9055252,740.5063317,738.6906068,706.016537,1178.665927,1308.495577,1389.817618,1196.810565,1104.103987,1133.98495,797.9081006,952.386129,1058.0643,1004.961353,1156.18186,1704.063724,3939.978789,4315.622723,4519.094331,5106.654313,5494.024437,4756.763836,5095.665738,5547.063754,7596.125964,10118.05318,10778.78385,13171.63885,400.448611,575.9870009,487.6740183,612.7056934,676.9000921,741.2374699,962.4213805,1378.904018,1655.784158,2289.234136,3119.280896,4959.114854,2144.115096,2323.805581,2492.351109,2678.729839,3264.660041,3815.80787,4397.575659,4903.2191,5444.648617,6117.361746,5755.259962,7006.580419,1102.990936,1211.148548,1406.648278,1876.029643,1937.577675,1172.603047,1267.100083,1315.980812,1246.90737,1173.618235,1075.811558,986.1478792,780.5423257,905.8602303,896.3146335,861.5932424,904.8960685,795.757282,673.7478181,672.774812,457.7191807,312.188423,241.1658765,277.5518587,2125.621418,2315.056572,2464.783157,2677.939642,3213.152683,3259.178978,4879.507522,4201.194937,4016.239529,3484.164376,3484.06197,3632.557798,2627.009471,2990.010802,3460.937025,4161.727834,5118.146939,5926.876967,5262.734751,5629.915318,6160.416317,6677.045314,7723.447195,9645.06142,1388.594732,1500.895925,1728.869428,2052.050473,2378.201111,2517.736547,2602.710169,2156.956069,1648.073791,1786.265407,1648.800823,1544.750112,3119.23652,4338.231617,5477.890018,6960.297861,9164.090127,11305.38517,13221.82184,13822.58394,8447.794873,9875.604515,11628.38895,14619.22272,5586.53878,6092.174359,5180.75591,5690.268015,5305.445256,6380.494966,7316.918107,7532.924763,5592.843963,5431.990415,6340.646683,8948.102923,6876.14025,8256.343918,10136.86713,11399.44489,13108.4536,14800.16062,15377.22855,16310.4434,14297.02122,16048.51424,17596.21022,22833.30851,9692.385245,11099.65935,13583.31351,15937.21123,18866.20721,20422.9015,21688.04048,25116.17581,26406.73985,29804.34567,32166.50006,35278.41874,2669.529475,2864.969076,3020.989263,3020.050513,3694.212352,3081.761022,2879.468067,2880.102568,2377.156192,1895.016984,1908.260867,2082.481567,1397.717137,1544.402995,1662.137359,1653.723003,2189.874499,2681.9889,2861.092386,2899.842175,3044.214214,3614.101285,4563.808154,6025.374752,3522.110717,3780.546651,4086.114078,4579.074215,5280.99471,6679.62326,7213.791267,6481.776993,7103.702595,7429.455877,5773.044512,6873.262326,1418.822445,1458.915272,1693.335853,1814.880728,2024.008147,2785.493582,3503.729636,3885.46071,3794.755195,4173.181797,4754.604414,5581.180998,3048.3029,3421.523218,3776.803627,4358.595393,4520.246008,5138.922374,4098.344175,4140.442097,4444.2317,5154.825496,5351.568666,5728.353514,375.6431231,426.0964081,582.8419714,915.5960025,672.4122571,958.5668124,927.8253427,966.8968149,1132.055034,2814.480755,7703.4959,12154.08975,328.9405571,344.1618859,380.9958433,468.7949699,514.3242082,505.7538077,524.8758493,521.1341333,582.8585102,913.47079,765.3500015,641.3695236,362.1462796,378.9041632,419.4564161,516.1186438,566.2439442,556.8083834,577.8607471,573.7413142,421.3534653,515.8894013,530.0535319,690.8055759,6424.519071,7545.415386,9371.842561,10921.63626,14358.8759,15605.42283,18533.15761,21141.01223,20647.16499,23723.9502,28204.59057,33207.0844,7029.809327,8662.834898,10560.48553,12999.91766,16107.19171,18292.63514,20293.89746,22066.44214,24703.79615,25889.78487,28926.03234,30470.0167,4293.476475,4976.198099,6631.459222,8358.761987,11401.94841,21745.57328,15113.36194,11864.40844,13522.15752,14722.84188,12521.71392,13206.48452,485.2306591,520.9267111,599.650276,734.7829124,756.0868363,884.7552507,835.8096108,611.6588611,665.6244126,653.7301704,660.5855997,752.7497265,7144.114393,10187.82665,12902.46291,14745.62561,18016.18027,20512.92123,22031.53274,24639.18566,26505.30317,27788.88416,30035.80198,32170.37442,911.2989371,1043.561537,1190.041118,1125.69716,1178.223708,993.2239571,876.032569,847.0061135,925.060154,1005.245812,1111.984578,1327.60891,3530.690067,4916.299889,6017.190733,8513.097016,12724.82957,14195.52428,15268.42089,16120.52839,17541.49634,18747.69814,22514.2548,27538.41188,2428.237769,2617.155967,2750.364446,3242.531147,4031.408271,4879.992748,4820.49479,4246.485974,4439.45084,4684.313807,4858.347495,5186.050003,510.1964923,576.2670245,686.3736739,708.7595409,741.6662307,874.6858643,857.2503577,805.5724718,794.3484384,869.4497668,945.5835837,942.6542111,299.850319,431.7904566,522.0343725,715.5806402,820.2245876,764.7259628,838.1239671,736.4153921,745.5398706,796.6644681,575.7047176,579.231743,1840.366939,1726.887882,1796.589032,1452.057666,1654.456946,1874.298931,2011.159549,1823.015995,1456.309517,1341.726931,1270.364932,1201.637154,2194.926204,2220.487682,2291.156835,2538.269358,2529.842345,3203.208066,3121.760794,3023.096699,3081.694603,3160.454906,3099.72866,3548.330846,3054.421209,3629.076457,4692.648272,6197.962814,8315.928145,11186.14125,14560.53051,20038.47269,24757.60301,28377.63219,30209.01516,39724.97867,5263.673816,6040.180011,7550.359877,9326.64467,10168.65611,11674.83737,12545.99066,12986.47998,10535.62855,11712.7768,14843.93556,18008.94444,7267.688428,9244.001412,10350.15906,13319.89568,15798.06362,19654.96247,23269.6075,26923.20628,25144.39201,28061.09966,31163.20196,36180.78919,546.5657493,590.061996,658.3471509,700.7706107,724.032527,813.337323,855.7235377,976.5126756,1164.406809,1458.817442,1746.769454,2452.210407,749.6816546,858.9002707,849.2897701,762.4317721,1111.107907,1382.702056,1516.872988,1748.356961,2383.140898,3119.335603,2873.91287,3540.651564,3035.326002,3290.257643,4187.329802,5906.731805,9613.818607,11888.59508,7608.334602,6642.881371,7235.653188,8263.590301,9240.761975,11605.71449,4129.766056,6229.333562,8341.737815,8931.459811,9576.037596,14688.23507,14517.90711,11643.57268,3745.640687,3076.239795,4390.717312,4471.061906,5210.280328,5599.077872,6631.597314,7655.568963,9530.772896,11150.98113,12618.32141,13872.86652,17558.81555,24521.94713,34077.04939,40675.99635,4086.522128,5385.278451,7105.630706,8393.741404,12786.93223,13306.61921,15367.0292,17122.47986,18051.52254,20896.60924,21905.59514,25523.2771,4931.404155,6248.656232,8243.58234,10022.40131,12269.27378,14255.98475,16537.4835,19207.23482,22013.64486,24675.02446,27968.09817,28569.7197,2898.530881,4756.525781,5246.107524,6124.703451,7433.889293,6650.195573,6068.05135,6351.237495,7404.923685,7121.924704,6994.774861,7320.880262,3216.956347,4317.694365,6576.649461,9847.788607,14778.78636,16610.37701,19384.10571,22375.94189,26824.89511,28816.58499,28604.5919,31656.06806,1546.907807,1886.080591,2348.009158,2741.796252,2110.856309,2852.351568,4161.415959,4448.679912,3431.593647,3645.379572,3844.917194,4519.461171,853.540919,944.4383152,896.9663732,1056.736457,1222.359968,1267.613204,1348.225791,1361.936856,1341.921721,1360.485021,1287.514732,1463.249282,1088.277758,1571.134655,1621.693598,2143.540609,3701.621503,4106.301249,4106.525293,4106.492315,3726.063507,1690.756814,1646.758151,1593.06548,1030.592226,1487.593537,1536.344387,2029.228142,3030.87665,4657.22102,5622.942464,8533.088805,12104.27872,15993.52796,19233.98818,23348.13973,108382.3529,113523.1329,95458.11176,80894.88326,109347.867,59265.47714,31354.03573,28118.42998,34932.91959,40300.61996,35110.10566,47306.98978,4834.804067,6089.786934,5714.560611,6006.983042,7486.384341,8659.696836,7640.519521,5377.091329,6890.806854,8754.96385,9313.93883,10461.05868,298.8462121,335.9971151,411.8006266,498.6390265,496.5815922,745.3695408,797.2631074,773.9932141,977.4862725,1186.147994,1275.184575,1569.331442,575.5729961,620.9699901,634.1951625,713.6036483,803.0054535,640.3224383,572.1995694,506.1138573,636.6229191,609.1739508,531.4823679,414.5073415,2387.54806,3448.284395,6757.030816,18772.75169,21011.49721,21951.21176,17364.27538,11770.5898,9640.138501,9467.446056,9534.677467,12057.49928,1443.011715,1589.20275,1643.38711,1634.047282,1748.562982,1544.228586,1302.878658,1155.441948,1040.67619,986.2958956,894.6370822,1044.770126,369.1650802,416.3698064,427.9010856,495.5147806,584.6219709,663.2236766,632.8039209,635.5173634,563.2000145,692.2758103,665.4231186,759.3499101,1831.132894,1810.066992,2036.884944,2277.742396,2849.09478,3827.921571,4920.355951,5249.802653,7277.912802,10132.90964,10206.97794,12451.6558,452.3369807,490.3821867,496.1743428,545.0098873,581.3688761,686.3952693,618.0140641,684.1715576,739.014375,790.2579846,951.4097518,1042.581557,743.1159097,846.1202613,1055.896036,1421.145193,1586.851781,1497.492223,1481.150189,1421.603576,1361.369784,1483.136136,1579.019543,1803.151496,1967.955707,2034.037981,2529.067487,2475.387562,2575.484158,3710.982963,3688.037739,4783.586903,6058.253846,7425.705295,9021.815894,10956.99112,3478.125529,4131.546641,4581.609385,5754.733883,6809.40669,7674.929108,9611.147541,8688.156003,9472.384295,9767.29753,10742.44053,11977.57496,786.5668575,912.6626085,1056.353958,1226.04113,1421.741975,1647.511665,2000.603139,2338.008304,1785.402016,1902.2521,2140.739323,3095.772271,2647.585601,3682.259903,4649.593785,5907.850937,7778.414017,9595.929905,11222.58762,11732.51017,7003.339037,6465.613349,6557.194282,9253.896111,1688.20357,1642.002314,1566.353493,1711.04477,1930.194975,2370.619976,2702.620356,2755.046991,2948.047252,2982.101858,3258.495584,3820.17523,468.5260381,495.5868333,556.6863539,566.6691539,724.9178037,502.3197334,462.2114149,389.8761846,410.8968239,472.3460771,633.6179466,823.6856205,331,350,388,349,357,371,424,385,347,415,611,944,2423.780443,2621.448058,3173.215595,3793.694753,3746.080948,3876.485958,4191.100511,3693.731337,3804.537999,3899.52426,4072.324751,4811.060429,545.8657229,597.9363558,652.3968593,676.4422254,674.7881296,694.1124398,718.3730947,775.6324501,897.7403604,1010.892138,1057.206311,1091.359778,8941.571858,11276.19344,12790.84956,15363.25136,18794.74567,21209.0592,21399.46046,23651.32361,26790.94961,30246.13063,33724.75778,36797.93332,10556.57566,12247.39532,13175.678,14463.91893,16046.03728,16233.7177,17632.4104,19007.19129,18363.32494,21050.41377,23189.80135,25185.00911,3112.363948,3457.415947,3634.364406,4643.393534,4688.593267,5486.371089,3470.338156,2955.984375,2170.151724,2253.023004,2474.548819,2749.320965,761.879376,835.5234025,997.7661127,1054.384891,954.2092363,808.8970728,909.7221354,668.3000228,581.182725,580.3052092,601.0745012,619.6768924,1077.281856,1100.592563,1150.927478,1014.514104,1698.388838,1981.951806,1576.97375,1385.029563,1619.848217,1624.941275,1615.286395,2013.977305,10095.42172,11653.97304,13450.40151,16361.87647,18965.05551,23311.34939,26298.63531,31540.9748,33965.66115,41283.16433,44683.97525,49357.19017,1828.230307,2242.746551,2924.638113,4720.942687,10618.03855,11848.34392,12954.79101,18115.22313,18616.70691,19702.05581,19774.83687,22316.19287,684.5971438,747.0835292,803.3427418,942.4082588,1049.938981,1175.921193,1443.429832,1704.686583,1971.829464,2049.350521,2092.712441,2605.94758,2480.380334,2961.800905,3536.540301,4421.009084,5364.249663,5351.912144,7009.601598,7034.779161,6618.74305,7113.692252,7356.031934,9809.185636,1952.308701,2046.154706,2148.027146,2299.376311,2523.337977,3248.373311,4258.503604,3998.875695,4196.411078,4247.400261,3783.674243,4172.838464,3758.523437,4245.256698,4957.037982,5788.09333,5937.827283,6281.290855,6434.501797,6360.943444,4446.380924,5838.347657,5909.020073,7408.905561,1272.880995,1547.944844,1649.552153,1814.12743,1989.37407,2373.204287,2603.273765,2189.634995,2279.324017,2536.534925,2650.921068,3190.481016,4029.329699,4734.253019,5338.752143,6557.152776,8006.506993,9508.141454,8451.531004,9082.351172,7738.881247,10159.58368,12002.23908,15389.92468,3068.319867,3774.571743,4727.954889,6361.517993,9022.247417,10172.48572,11753.84291,13039.30876,16207.26663,17641.03156,19970.90787,20509.64777,3081.959785,3907.156189,5108.34463,6929.277714,9123.041742,9770.524921,10330.98915,12281.34191,14641.58711,16999.4333,18855.60618,19328.70901,2718.885295,2769.451844,3173.72334,4021.175739,5047.658563,4319.804067,5267.219353,5303.377488,6101.255823,6071.941411,6316.1652,7670.122558,3144.613186,3943.370225,4734.997586,6470.866545,8011.414402,9356.39724,9605.314053,9696.273295,6598.409903,7346.547557,7885.360081,10808.47561,493.3238752,540.2893983,597.4730727,510.9637142,590.5806638,670.0806011,881.5706467,847.991217,737.0685949,589.9445051,785.6537648,863.0884639,879.5835855,860.7369026,1071.551119,1384.840593,1532.985254,1737.561657,1890.218117,1516.525457,1428.777814,1339.076036,1353.09239,1598.435089,6459.554823,8157.591248,11626.41975,16903.04886,24837.42865,34167.7626,33693.17525,21198.26136,24841.61777,20586.69019,19014.54118,21654.83194,1450.356983,1567.653006,1654.988723,1612.404632,1597.712056,1561.769116,1518.479984,1441.72072,1367.899369,1392.368347,1519.635262,1712.472136,3581.459448,4981.090891,6289.629157,7991.707066,10522.06749,12980.66956,15181.0927,15870.87851,9325.068238,7914.320304,7236.075251,9786.534714,879.7877358,1004.484437,1116.639877,1206.043465,1353.759762,1348.285159,1465.010784,1294.447788,1068.696278,574.6481576,699.489713,862.5407561,2315.138227,2843.104409,3674.735572,4977.41854,8597.756202,11210.08948,15169.16112,18861.53081,24769.8912,33519.4766,36023.1054,47143.17964,5074.659104,6093.26298,7481.107598,8412.902397,9674.167626,10922.66404,11348.54585,12037.26758,9498.467723,12126.23065,13638.77837,18678.31435,4215.041741,5862.276629,7402.303395,9405.489397,12383.4862,15277.03017,17866.72175,18678.53492,14214.71681,17161.10735,20660.01936,25768.25759,1135.749842,1258.147413,1369.488336,1284.73318,1254.576127,1450.992513,1176.807031,1093.244963,926.9602964,930.5964284,882.0818218,926.1410683,4725.295531,5487.104219,5768.729717,7114.477971,7765.962636,8028.651439,8568.266228,7825.823398,7225.069258,7479.188244,7710.946444,9269.657808,3834.034742,4564.80241,5693.843879,7993.512294,10638.75131,13236.92117,13926.16997,15764.98313,18603.06452,20445.29896,24835.47166,28821.0637,1083.53203,1072.546602,1074.47196,1135.514326,1213.39553,1348.775651,1648.079789,1876.766827,2153.739222,2664.477257,3015.378833,3970.095407,1615.991129,1770.337074,1959.593767,1687.997641,1659.652775,2202.988423,1895.544073,1507.819159,1492.197043,1632.210764,1993.398314,2602.394995,1148.376626,1244.708364,1856.182125,2613.101665,3364.836625,3781.410618,3895.384018,3984.839812,3553.0224,3876.76846,4128.116943,4513.480643,8527.844662,9911.878226,12329.44192,15258.29697,17832.02464,18855.72521,20667.38125,23586.92927,23880.01683,25266.59499,29341.63093,33859.74835,14734.23275,17909.48973,20431.0927,22966.14432,27195.11304,26982.29052,28397.71512,30281.70459,31871.5303,32135.32301,34480.95771,37506.41907,1643.485354,2117.234893,2193.037133,1881.923632,2571.423014,3195.484582,3761.837715,3116.774285,3340.542768,4014.238972,4090.925331,4184.548089,1206.947913,1507.86129,1822.879028,2643.858681,4062.523897,5596.519826,7426.354774,11054.56175,15215.6579,20206.82098,23235.42329,28718.27684,716.6500721,698.5356073,722.0038073,848.2186575,915.9850592,962.4922932,874.2426069,831.8220794,825.682454,789.1862231,899.0742111,1107.482182,757.7974177,793.5774148,1002.199172,1295.46066,1524.358936,1961.224635,2393.219781,2982.653773,4616.896545,5852.625497,5913.187529,7458.396327,859.8086567,925.9083202,1067.53481,1477.59676,1649.660188,1532.776998,1344.577953,1202.201361,1034.298904,982.2869243,886.2205765,882.9699438,3023.271928,4100.3934,4997.523971,5621.368472,6619.551419,7899.554209,9119.528607,7388.597823,7370.990932,8792.573126,11460.60023,18008.50924,1468.475631,1395.232468,1660.30321,1932.360167,2753.285994,3120.876811,3560.233174,3810.419296,4332.720164,4876.798614,5722.895655,7092.923025,1969.10098,2218.754257,2322.869908,2826.356387,3450.69638,4269.122326,4241.356344,5089.043686,5678.348271,6601.429915,6508.085718,8458.276384,734.753484,774.3710692,767.2717398,908.9185217,950.735869,843.7331372,682.2662268,617.7244065,644.1707969,816.559081,927.7210018,1056.380121,9979.508487,11283.17795,12477.17707,14142.85089,15895.11641,17428.74846,18232.42452,21664.78767,22705.09254,26074.53136,29478.99919,33203.26128,13990.48208,14847.12712,16173.14586,19530.36557,21806.03594,24072.63213,25009.55914,29884.35041,32003.93224,35767.43303,39097.09955,42951.65309,5716.766744,6150.772969,5603.357717,5444.61962,5703.408898,6504.339663,6920.223051,7452.398969,8137.004775,9230.240708,7727.002004,10611.46299,7689.799761,9802.466526,8422.974165,9541.474188,10505.25966,13143.95095,11152.41011,9883.584648,10733.92631,10165.49518,8605.047831,11415.80569,605.0664917,676.2854478,772.0491602,637.1232887,699.5016441,713.5371196,707.2357863,820.7994449,989.0231487,1385.896769,1764.456677,2441.576404,1515.592329,1827.067742,2198.956312,2649.715007,3133.409277,3682.831494,4336.032082,5107.197384,6017.654756,7110.667619,4515.487575,3025.349798,781.7175761,804.8304547,825.6232006,862.4421463,1265.047031,1829.765177,1977.55701,1971.741538,1879.496673,2117.484526,2234.820827,2280.769906,1147.388831,1311.956766,1452.725766,1777.077318,1773.498265,1588.688299,1408.678565,1213.315116,1210.884633,1071.353818,1071.613938,1271.211593,406.8841148,518.7642681,527.2721818,569.7950712,799.3621758,685.5876821,788.8550411,706.1573059,693.4207856,792.4499603,672.0386227,469.7092981]},"columns":[{"id":"continente","name":"continente","type":"factor"},{"id":"pais","name":"pais","type":"factor"},{"id":"ano","name":"ano","type":"numeric","sortable":true},{"id":"pib_per_capita","name":"pib_per_capita","type":"numeric"}],"groupBy":["continente"],"searchable":true,"outlined":true,"dataKey":"0774b8213101826a1d24590e9a576248"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<ol type="1">
+<li>Base do pacote {dados}</li>
+<li>Selecionando algumas colunas</li>
+<li>Agrupando pela coluna ‘continente’</li>
+<li>Inserindo uma busca na tabela</li>
+<li>Linhas na tabela</li>
+<li>Ordem crescente na coluna ‘ano’</li>
+</ol>
+<!-- -->
+
+
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Código fonte</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Meu relatório em Quarto" # Título do relatório</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "**Minicurso - Introdução ao Quarto**"</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Ariane Hayana" # Autor(a)</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="an">lang:</span><span class="co"> pt # Linguagem em português</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "`r format(Sys.Date())`" # Data do relatório</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="an">date-format:</span><span class="co"> short # Formato de data curto: dd/MM/yyyy </span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="an">toc:</span><span class="co"> true # Adiciona um índice no relatório</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">    html: </span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co">      css: ["custom.css"] # Customização com css</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co">      code-fold: false # code-fold: true para "ocultar" o bloco de códigos</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co">      code-tools: true  #code-tools: true para ativar ferramentas de interação com os códigos</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co">  #    number-sections: true # Número de seções/subseções</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co">      theme: </span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co">        light: cosmo</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co">        dark: superhero # Sugestão: superhero/vapor Mudar o tema do relatório aqui</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner:</span><span class="co"> "#874a9c" # Pode ser 'true', uma cor ou imagem</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="an">code-annotations:</span><span class="co"> hover # Para anotações em códigos</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="co">  warning: false</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co">  message: false</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="an">reference-location:</span><span class="co"> margin</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="an">citation-location:</span><span class="co"> margin</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> references.bib</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="an">params:</span></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="co">  dataset: "iris" # Parâmetros aplicável em todo o documento</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Script para logo na página</span></span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>htmltools<span class="sc">::</span><span class="fu">img</span>(</span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>  <span class="at">src =</span> knitr<span class="sc">::</span><span class="fu">image_uri</span>(<span class="fu">file.path</span>(<span class="st">"img"</span>, <span class="st">"logo.png"</span>)),</span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>  <span class="at">alt =</span> <span class="st">'logo'</span>,</span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>  <span class="at">style =</span> <span class="st">'position:absolute; top:0; left:20px; padding:30px;'</span></span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conjunto de dados: Iris</span></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>O conjunto de dados consiste em 50 amostras de cada uma das três espécies de *Iris* ( *Iris setosa*, *Iris virginica* e *Iris versicolor*). Quatro variáveis foram medidas em cada amostra: o comprimento e a largura das sépalas e pétalas, em centímetros.</span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>Fonte: <span class="co">[</span><span class="ot">Wikipédia</span><span class="co">](https://pt.wikipedia.org/wiki/Conjunto_de_dados_flor_Iris)</span></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>Os dados podem ser consultados na guia *Tabela*, bem como as imagens das flores:</span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>::: panel-tabset</span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tabela</span></span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a>iris <span class="sc">|&gt;</span></span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a>  reactable<span class="sc">::</span><span class="fu">reactable</span>(<span class="at">groupBy =</span> <span class="st">"Species"</span>, <span class="co"># Agrupando pela coluna 'Species'</span></span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a>  <span class="at">searchable =</span> <span class="cn">TRUE</span>, <span class="co"># Inserindo uma busca na tabela</span></span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">outlined =</span> <span class="cn">TRUE</span>) <span class="co"># Linhas na tabela</span></span>
+<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Setosa</span></span>
+<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a><span class="in">``` md</span></span>
+<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a><span class="al">![Iris setosa](img/setosa.png)</span>{fig-align="center" width="300"}</span>
+<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a><span class="al">![Iris setosa](img/setosa.png)</span>{fig-align="center" width="300"}</span>
+<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a><span class="fu">## Versicolor</span></span>
+<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a><span class="in">``` md</span></span>
+<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a><span class="al">![Iris versicolor](img/versicolor.png)</span>{fig-align="center" width="304"}</span>
+<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a><span class="al">![Iris versicolor](img/versicolor.png)</span>{fig-align="center" width="304"}</span>
+<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## Virginica</span></span>
+<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a><span class="in">``` md</span></span>
+<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a><span class="al">![Iris virginica](img/virginica.png)</span>{fig-align="center" width="300"}</span>
+<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-85"><a href="#cb12-85" aria-hidden="true" tabindex="-1"></a><span class="al">![Iris virginica](img/virginica.png)</span>{fig-align="center" width="300"}</span>
+<span id="cb12-86"><a href="#cb12-86" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a><span class="fu">### Inserindo código do R em linha de texto</span></span>
+<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a>Você pode automatizar a apresentação de seus resultados no texto:</span>
+<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; O *dataset* `r params$dataset` tem `r ncol(iris)` colunas e `r nrow(iris)` linhas. As variáveis do *dataset* são *`r names(iris)`*.</span></span>
+<span id="cb12-93"><a href="#cb12-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-94"><a href="#cb12-94" aria-hidden="true" tabindex="-1"></a><span class="fu">### Visualizações</span></span>
+<span id="cb12-95"><a href="#cb12-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-96"><a href="#cb12-96" aria-hidden="true" tabindex="-1"></a>Podemos gerar uma matriz de gráficos de dispersão interativa usando a biblioteca <span class="in">`JavaScript D3`</span> do pacote <span class="in">`pairsD3`</span> <span class="co">[</span><span class="ot">@pairsD3</span><span class="co">]</span>.</span>
+<span id="cb12-97"><a href="#cb12-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Matriz interativa - Iris"</span></span>
+<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-104"><a href="#cb12-104" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pairsD3)</span>
+<span id="cb12-105"><a href="#cb12-105" aria-hidden="true" tabindex="-1"></a><span class="fu">pairsD3</span>(iris[,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">group=</span>iris[,<span class="dv">5</span>])</span>
+<span id="cb12-106"><a href="#cb12-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-107"><a href="#cb12-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 5</span></span>
+<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3</span></span>
+<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: "center"</span></span>
+<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Boxplot estático."</span></span>
+<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a>plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(iris, </span>
+<span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Species,</span>
+<span id="cb12-120"><a href="#cb12-120" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span>  Sepal.Length)) <span class="sc">+</span> </span>
+<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> Species)) <span class="sc">+</span></span>
+<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">caption =</span> <span class="st">"Elaborado por: Ariane Hayana"</span>) <span class="sc">+</span></span>
+<span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Espécies"</span>) <span class="sc">+</span> </span>
+<span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Sepal Length"</span>) <span class="sc">+</span> </span>
+<span id="cb12-125"><a href="#cb12-125" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>();plot</span>
+<span id="cb12-126"><a href="#cb12-126" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-130"><a href="#cb12-130" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-131"><a href="#cb12-131" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 5</span></span>
+<span id="cb12-132"><a href="#cb12-132" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3</span></span>
+<span id="cb12-133"><a href="#cb12-133" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb12-134"><a href="#cb12-134" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Boxplot dinâmico."</span></span>
+<span id="cb12-135"><a href="#cb12-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-136"><a href="#cb12-136" aria-hidden="true" tabindex="-1"></a>plotly<span class="sc">::</span><span class="fu">ggplotly</span>(plot)</span>
+<span id="cb12-137"><a href="#cb12-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-138"><a href="#cb12-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-139"><a href="#cb12-139" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tabela descritiva com pacote `summarytools`</span></span>
+<span id="cb12-140"><a href="#cb12-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-143"><a href="#cb12-143" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-144"><a href="#cb12-144" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(summarytools) </span>
+<span id="cb12-145"><a href="#cb12-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-146"><a href="#cb12-146" aria-hidden="true" tabindex="-1"></a><span class="fu">descr</span>(iris) <span class="sc">|&gt;</span> </span>
+<span id="cb12-147"><a href="#cb12-147" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="at">digits =</span> <span class="dv">3</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb12-148"><a href="#cb12-148" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span>
+<span id="cb12-149"><a href="#cb12-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-150"><a href="#cb12-150" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-151"><a href="#cb12-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-152"><a href="#cb12-152" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Fonte: @summarytools.</span>
+<span id="cb12-153"><a href="#cb12-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-154"><a href="#cb12-154" aria-hidden="true" tabindex="-1"></a><span class="fu">## Vídeos no relatório Quarto</span></span>
+<span id="cb12-155"><a href="#cb12-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-156"><a href="#cb12-156" aria-hidden="true" tabindex="-1"></a>Para inserir vídeos, após feita as instalações necessárias, basta inserir o link do Youtube na sintaxe a seguir:</span>
+<span id="cb12-157"><a href="#cb12-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-158"><a href="#cb12-158" aria-hidden="true" tabindex="-1"></a><span class="in">``` {.default shortcodes="false"}</span></span>
+<span id="cb12-159"><a href="#cb12-159" aria-hidden="true" tabindex="-1"></a><span class="in">{{&lt; video https://youtu.be/tE88RxsUOuc &gt;}}</span></span>
+<span id="cb12-160"><a href="#cb12-160" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-161"><a href="#cb12-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-162"><a href="#cb12-162" aria-hidden="true" tabindex="-1"></a>O resultado será:</span>
+<span id="cb12-163"><a href="#cb12-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-164"><a href="#cb12-164" aria-hidden="true" tabindex="-1"></a>{{&lt; video https://youtu.be/tE88RxsUOuc &gt;}}</span>
+<span id="cb12-165"><a href="#cb12-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-166"><a href="#cb12-166" aria-hidden="true" tabindex="-1"></a>Para alterar o tamanho do vídeo, basta inserir <span class="in">`width="xx"`</span> (largura) <span class="in">`height="xx"`</span> (altura), como no exemplo:</span>
+<span id="cb12-167"><a href="#cb12-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-168"><a href="#cb12-168" aria-hidden="true" tabindex="-1"></a><span class="in">``` {.default shortcodes="false"}</span></span>
+<span id="cb12-169"><a href="#cb12-169" aria-hidden="true" tabindex="-1"></a><span class="in">{{&lt; video https://youtu.be/tE88RxsUOuc width="225" height="170" &gt;}}</span></span>
+<span id="cb12-170"><a href="#cb12-170" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-171"><a href="#cb12-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-172"><a href="#cb12-172" aria-hidden="true" tabindex="-1"></a>Para mais detalhes sobre a utilização de vídeos, clique <span class="co">[</span><span class="ot">aqui</span><span class="co">](https://quarto.org/docs/authoring/videos.html)</span>.</span>
+<span id="cb12-173"><a href="#cb12-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-174"><a href="#cb12-174" aria-hidden="true" tabindex="-1"></a>::: column-margin</span>
+<span id="cb12-175"><a href="#cb12-175" aria-hidden="true" tabindex="-1"></a>O resultado com as dimensões <span class="in">`width="225" e height="170"`</span> será assim:</span>
+<span id="cb12-176"><a href="#cb12-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a>{{&lt; video https://youtu.be/tE88RxsUOuc width="225" height="170" &gt;}}</span>
+<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-179"><a href="#cb12-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a><span class="fu">## Anotações em códigos</span></span>
+<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-182"><a href="#cb12-182" aria-hidden="true" tabindex="-1"></a>::: callout-warning</span>
+<span id="cb12-183"><a href="#cb12-183" aria-hidden="true" tabindex="-1"></a><span class="fu"># Necessário instalar Quarto v1.3</span></span>
+<span id="cb12-184"><a href="#cb12-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a>O <span class="in">`Code Annotation`</span> é um recurso do Quarto v1.3. Se você quiser usar esse recurso, faça o download e instale o Quarto v1.3 antes de continuar.</span>
+<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a>Instale a versão de pré-lançamento do Quarto <span class="co">[</span><span class="ot">aqui</span><span class="co">](https://quarto.org/docs/download/prerelease.html)</span>. Vale ressaltar que o pré-lançamento destina-se a fins de *teste*.</span>
+<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb12-195"><a href="#cb12-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-196"><a href="#cb12-196" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dados)</span>
+<span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reactable)</span>
+<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb12-199"><a href="#cb12-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a>dados_gapminder <span class="sc">|&gt;</span>                                  <span class="co"># &lt;1&gt; </span></span>
+<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(continente, pais, ano, pib_per_capita) <span class="sc">|&gt;</span>  <span class="co"># &lt;2&gt; </span></span>
+<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">reactable</span>(</span>
+<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a>    <span class="at">groupBy =</span> <span class="st">"continente"</span>,                         <span class="co"># &lt;3&gt;</span></span>
+<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a>    <span class="at">searchable =</span> <span class="cn">TRUE</span>,                              <span class="co"># &lt;4&gt;</span></span>
+<span id="cb12-205"><a href="#cb12-205" aria-hidden="true" tabindex="-1"></a>    <span class="at">outlined =</span> <span class="cn">TRUE</span>,                                <span class="co"># &lt;5&gt;</span></span>
+<span id="cb12-206"><a href="#cb12-206" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">list</span>(<span class="at">ano =</span> <span class="fu">colDef</span>(<span class="at">sortable =</span> <span class="cn">TRUE</span>)))   <span class="co"># &lt;6&gt;</span></span>
+<span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Base do pacote {dados}</span>
+<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Selecionando algumas colunas</span>
+<span id="cb12-211"><a href="#cb12-211" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Agrupando pela coluna 'continente'</span>
+<span id="cb12-212"><a href="#cb12-212" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>Inserindo uma busca na tabela</span>
+<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>Linhas na tabela</span>
+<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a><span class="ss">6.  </span>Ordem crescente na coluna 'ano'</span>
+<span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a></span>
+</code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -10,7 +10,7 @@ book:
   cover-image: cover.png
   favicon: cover.png
   #site-url: https://r4ds.hadley.nz/
-  repo-url: https://github.com/hadley/r4ds/
+  repo-url: https://github.com/IzadoraSC/manual-mapfogo
   repo-branch: main
   repo-actions: [edit, issue]
   

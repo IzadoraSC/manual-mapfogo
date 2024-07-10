@@ -1,0 +1,126 @@
+---
+title: "Meu relatório em Quarto" # Título
+author: "Ariane Hayana" # Autor
+date: "`r format(Sys.Date())`" # Data do relatório
+lang: pt # Linguagem em português
+format:  
+  pdf: 
+    toc: true # Índice
+    number-sections: true # Seções numéricas ativas se 'true'
+    papersize: A4 # Folha A4
+    fig-cap-location: bottom # Onde colocar as legendas das figuras (opções: top, bottom, ou margin)
+    documentclass: report 
+    lof: true # Lista de figuras
+    lot: true # Lista de tabelas
+   # geometry: Interface para documentar as dimensões
+    geometry: 
+      - top=30mm
+      - left=30mm
+      - right=20mm
+      - heightrounded 
+    fontfamily: libertinus # Pacote de fontes para usar ao compilar um PDF
+bibliography: references.bib 
+csl: normas_abnt.csl # Citation Style Language - Verificar normas: Zotero
+params:
+  ano: "2022" # Parâmetros aplicável em todo o documento
+---
+
+```{r global}
+#| include: false
+
+# Configurações gerais do documento
+knitr::opts_chunk$set(echo = FALSE,
+               message = FALSE,
+               warning = FALSE)
+```
+
+<!-- {.unnumbered} = Para não aparecer a numeração -->
+
+# Resumo {.unnumbered}
+
+```{r}
+x <- 1+1
+```
+
+*Este relatório foi emitido em `r params$ano`. Os resultados foram iguais a `r sum(rnorm(200))`, considerando uma amostra com distribuição normal. O valor de* $x$ encontrado foi igual a `r x`. A fórmula utilizada foi $\alpha = 1+1$.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet dictum sit amet justo donec. Est ultricies integer quis auctor elit. Elit scelerisque mauris pellentesque pulvinar pellentesque. Vel turpis nunc eget lorem dolor sed. Aliquet eget sit amet tellus cras adipiscing enim. Nisl nunc mi ipsum faucibus vitae. Justo nec ultrices dui sapien eget mi proin sed libero. Ipsum consequat nisl vel pretium lectus. Suspendisse sed nisi lacus sed viverra. Justo laoreet sit amet cursus sit amet. Cursus metus aliquam eleifend mi in nulla. Aliquam ut porttitor leo a. Tortor dignissim convallis aenean et tortor at risus. Commodo sed egestas egestas fringilla phasellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet dictum sit amet justo donec. Est ultricies integer quis auctor elit. Elit scelerisque mauris pellentesque pulvinar pellentesque. Vel turpis nunc eget lorem dolor sed. Aliquet eget sit amet tellus cras adipiscing enim. Nisl nunc mi ipsum faucibus vitae. Justo nec ultrices dui sapien eget mi proin sed libero. Ipsum consequat nisl vel pretium lectus. Suspendisse sed nisi lacus sed viverra. Justo laoreet sit amet cursus sit amet. Cursus metus aliquam eleifend mi in nulla. Aliquam ut porttitor leo a. Tortor dignissim convallis aenean et tortor at risus. Commodo sed egestas egestas fringilla phasellus.
+
+# Introdução
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam phasellus vestibulum lorem sed risus ultricies tristique. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Enim neque volutpat ac tincidunt vitae semper. Arcu risus quis varius quam quisque id diam vel. Nullam non nisi est sit amet facilisis magna etiam. Viverra mauris in aliquam sem fringilla ut. Sit amet tellus cras adipiscing. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat. Leo vel orci porta non pulvinar neque laoreet suspendisse. Urna molestie at elementum eu facilisis sed odio morbi quis. Nisi porta lorem mollis aliquam ut porttitor leo a diam. Suspendisse ultrices gravida dictum fusce ut placerat. Egestas sed sed risus pretium. Nisi est sit amet facilisis magna etiam. Elementum eu facilisis sed odio morbi. Quisque egestas diam in arcu cursus euismod. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur.
+
+Eu non diam phasellus vestibulum lorem sed. Tortor vitae purus faucibus ornare suspendisse sed. Sem nulla pharetra diam sit amet nisl suscipit. Ultricies integer quis auctor elit sed. Aliquet eget sit amet tellus cras adipiscing enim eu. Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Nunc sed velit dignissim sodales ut. Amet risus nullam eget felis eget nunc lobortis. Ultrices eros in cursus turpis massa tincidunt dui. Ornare suspendisse sed nisi lacus sed viverra tellus. Mauris ultrices eros in cursus turpis massa tincidunt dui. Adipiscing elit ut aliquam purus sit amet. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Nam libero justo laoreet sit amet. Arcu ac tortor dignissim convallis. Turpis egestas sed tempus urna. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Suspendisse sed nisi lacus sed viverra. Egestas sed sed risus pretium quam vulputate.
+
+Egestas purus viverra accumsan in nisl nisi scelerisque. Volutpat est velit egestas dui id ornare arcu odio ut. Aliquet nec ullamcorper sit amet risus nullam eget felis eget. Fringilla urna porttitor rhoncus dolor purus. Arcu non odio euismod lacinia. Eu consequat ac felis donec. Venenatis lectus magna fringilla urna porttitor rhoncus. Odio facilisis mauris sit amet massa. Et sollicitudin ac orci phasellus egestas. Egestas sed sed risus pretium quam vulputate. Ornare lectus sit amet est placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet dictum sit amet justo donec. [^1]
+
+[^1]: Saiba mais em: [Quarto.org](https://quarto.org/docs/output-formats/pdf-basics.html) e configuração do documento em pdf, acesse o [guia do usuário Pandoc](https://pandoc.org/MANUAL.html#variables-for-latex).
+
+## Objetivo Geral
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet dictum sit amet justo donec. Est ultricies integer quis auctor elit. Elit scelerisque mauris pellentesque pulvinar pellentesque. Vel turpis nunc eget lorem dolor sed. Aliquet eget sit amet tellus cras adipiscing enim. Nisl nunc mi ipsum faucibus vitae. Justo nec ultrices dui sapien eget mi proin sed libero. Ipsum consequat nisl vel pretium lectus. Suspendisse sed nisi lacus sed viverra. Justo laoreet sit amet cursus sit amet. Cursus metus aliquam eleifend mi in nulla. Aliquam ut porttitor leo a. Tortor dignissim convallis aenean et tortor at risus. Commodo sed egestas egestas fringilla phasellus.
+
+## Objetivos específicos
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet dictum sit amet justo donec. Est ultricies integer quis auctor elit. Elit scelerisque mauris pellentesque pulvinar pellentesque. Vel turpis nunc eget lorem dolor sed. Aliquet eget sit amet tellus cras adipiscing enim. Nisl nunc mi ipsum faucibus vitae. Justo nec ultrices dui sapien eget mi proin sed libero. Ipsum consequat nisl vel pretium lectus. Suspendisse sed nisi lacus sed viverra. Justo laoreet sit amet cursus sit amet. Cursus metus aliquam eleifend mi in nulla. Aliquam ut porttitor leo a. Tortor dignissim convallis aenean et tortor at risus. Commodo sed egestas egestas fringilla phasellus.
+
+# Embasamento teórico
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet dictum sit amet justo donec. Est ultricies integer quis auctor elit. Elit scelerisque mauris pellentesque pulvinar pellentesque. Vel turpis nunc eget lorem dolor sed. Aliquet eget sit amet tellus cras adipiscing enim. Nisl nunc mi ipsum faucibus vitae. Justo nec ultrices dui sapien eget mi proin sed libero. Ipsum consequat nisl vel pretium lectus. Suspendisse sed nisi lacus sed viverra. Justo laoreet sit amet cursus sit amet. Cursus metus aliquam eleifend mi in nulla. Aliquam ut porttitor leo a. Tortor dignissim convallis aenean et tortor at risus. Commodo sed egestas egestas fringilla phasellus.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet dictum sit amet justo donec. Est ultricies integer quis auctor elit. Elit scelerisque mauris pellentesque pulvinar pellentesque. Vel turpis nunc eget lorem dolor sed. Aliquet eget sit amet tellus cras adipiscing enim. Nisl nunc mi ipsum faucibus vitae. Justo nec ultrices dui sapien eget mi proin sed libero. Ipsum consequat nisl vel pretium lectus. Suspendisse sed nisi lacus sed viverra. Justo laoreet sit amet cursus sit amet. Cursus metus aliquam eleifend mi in nulla. Aliquam ut porttitor leo a. Tortor dignissim convallis aenean et tortor at risus. Commodo sed egestas egestas fringilla phasellus.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet dictum sit amet justo donec. Est ultricies integer quis auctor elit. Elit scelerisque mauris pellentesque pulvinar pellentesque. Vel turpis nunc eget lorem dolor sed. Aliquet eget sit amet tellus cras adipiscing enim. Nisl nunc mi ipsum faucibus vitae. Justo nec ultrices dui sapien eget mi proin sed libero. Ipsum consequat nisl vel pretium lectus. Suspendisse sed nisi lacus sed viverra. Justo laoreet sit amet cursus sit amet. Cursus metus aliquam eleifend mi in nulla. Aliquam ut porttitor leo a. Tortor dignissim convallis aenean et tortor at risus. Commodo sed egestas egestas fringilla phasellus.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet dictum sit amet justo donec. Est ultricies integer quis auctor elit. Elit scelerisque mauris pellentesque pulvinar pellentesque. Vel turpis nunc eget lorem dolor sed. Aliquet eget sit amet tellus cras adipiscing enim. Nisl nunc mi ipsum faucibus vitae. Justo nec ultrices dui sapien eget mi proin sed libero. Ipsum consequat nisl vel pretium lectus. Suspendisse sed nisi lacus sed viverra. Justo laoreet sit amet cursus sit amet. Cursus metus aliquam eleifend mi in nulla. Aliquam ut porttitor leo a. Tortor dignissim convallis aenean et tortor at risus. Commodo sed egestas egestas fringilla phasellus.
+
+# Análise descritiva dos dados
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet dictum sit amet justo donec. Est ultricies integer quis auctor elit. Elit scelerisque mauris pellentesque pulvinar pellentesque. Vel turpis nunc eget lorem dolor sed. Aliquet eget sit amet tellus cras adipiscing enim.
+
+```{r}
+knitr::kable(head(iris), caption = 'Seis primeiras linhas - Iris'
+)
+```
+
+```{r}
+#| fig-width: 5 # Largura da figura 
+#| fig-height: 3 # Altura da figura
+#| fig-align: "center" # Figura centralizada
+#| fig-cap: "Boxplot estático." # Legenda da figura
+
+library(ggplot2)
+plot <- ggplot(iris, 
+  aes(x = Species,
+      y =  Sepal.Length)) + 
+  geom_boxplot(aes(fill = Species)) +
+  xlab("Espécies") + 
+  ylab("Sepal Length") + 
+  theme_grey();plot
+```
+
+# Materiais e métodos
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam phasellus vestibulum lorem sed risus ultricies tristique. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Enim neque volutpat ac tincidunt vitae semper. Arcu risus quis varius quam quisque id diam vel. Nullam non nisi est sit amet facilisis magna etiam. Viverra mauris in aliquam sem fringilla ut. Sit amet tellus cras adipiscing. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat. Leo vel orci porta non pulvinar neque laoreet suspendisse. Urna molestie at elementum eu facilisis sed odio morbi quis. Nisi porta lorem mollis aliquam ut porttitor leo a diam. Suspendisse ultrices gravida dictum fusce ut placerat. Egestas sed sed risus pretium. Nisi est sit amet facilisis magna etiam. Elementum eu facilisis sed odio morbi. Quisque egestas diam in arcu cursus euismod. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur.
+
+Est ultricies integer quis auctor elit. Elit scelerisque mauris pellentesque pulvinar pellentesque. Vel turpis nunc eget lorem dolor sed. Aliquet eget sit amet tellus cras adipiscing enim. Nisl nunc mi ipsum faucibus vitae. Justo nec ultrices dui sapien eget mi proin sed libero. Ipsum consequat nisl vel pretium lectus. Suspendisse sed nisi lacus sed viverra. Justo laoreet sit amet cursus sit amet. Cursus metus aliquam eleifend mi in nulla. Aliquam ut porttitor leo a. Tortor dignissim convallis aenean et tortor at risus. Commodo sed egestas egestas fringilla phasellus.
+
+Risus ultricies tristique nulla aliquet enim. Netus et malesuada fames ac turpis egestas. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Est ante in nibh mauris cursus mattis molestie a iaculis. Diam vel quam elementum pulvinar etiam. Id interdum velit laoreet id donec. Blandit libero volutpat sed cras ornare arcu. Rhoncus est pellentesque elit ullamcorper dignissim. Nisi porta lorem mollis aliquam. Tempor orci eu lobortis elementum nibh tellus. Cursus metus aliquam eleifend mi in. Fringilla urna porttitor rhoncus dolor purus non. Suspendisse potenti nullam ac tortor. At tellus at urna condimentum. Netus et malesuada fames ac. Ut tortor pretium viverra suspendisse potenti nullam. Vitae semper quis lectus nulla at volutpat diam ut. Gravida quis blandit turpis cursus.
+
+# Resultados e discussões
+
+Eu non diam phasellus vestibulum lorem sed. Tortor vitae purus faucibus ornare suspendisse sed. Sem nulla pharetra diam sit amet nisl suscipit. Ultricies integer quis auctor elit sed. Aliquet eget sit amet tellus cras adipiscing enim eu. Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Nunc sed velit dignissim sodales ut. Amet risus nullam eget felis eget nunc lobortis. Ultrices eros in cursus turpis massa tincidunt dui. Ornare suspendisse sed nisi lacus sed viverra tellus. Mauris ultrices eros in cursus turpis massa tincidunt dui. Adipiscing elit ut aliquam purus sit amet. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Nam libero justo laoreet sit amet. Arcu ac tortor dignissim convallis. Turpis egestas sed tempus urna. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Suspendisse sed nisi lacus sed viverra. Egestas sed sed risus pretium quam vulputate.
+
+Egestas purus viverra accumsan in nisl nisi scelerisque. Volutpat est velit egestas dui id ornare arcu odio ut. Aliquet nec ullamcorper sit amet risus nullam eget felis eget. Fringilla urna porttitor rhoncus dolor purus. Arcu non odio euismod lacinia. Eu consequat ac felis donec. Venenatis lectus magna fringilla urna porttitor rhoncus. Odio facilisis mauris sit amet massa. Et sollicitudin ac orci phasellus egestas. Egestas sed sed risus pretium quam vulputate. Ornare lectus sit amet est placerat.
+
+# Considerações finais
+
+Eu non diam phasellus vestibulum lorem sed. Tortor vitae purus faucibus ornare suspendisse sed. Sem nulla pharetra diam sit amet nisl suscipit. Ultricies integer quis auctor elit sed. Aliquet eget sit amet tellus cras adipiscing enim eu. Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Nunc sed velit dignissim sodales ut. Amet risus nullam eget felis eget nunc lobortis. Ultrices eros in cursus turpis massa tincidunt dui. Ornare suspendisse sed nisi lacus sed viverra tellus. Mauris ultrices eros in cursus turpis massa tincidunt dui. Adipiscing elit ut aliquam purus sit amet. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Nam libero justo laoreet sit amet. Arcu ac tortor dignissim convallis. Turpis egestas sed tempus urna. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Suspendisse sed nisi lacus sed viverra. Egestas sed sed risus pretium quam vulputate.
+
+Egestas purus viverra accumsan in nisl nisi scelerisque. Volutpat est velit egestas dui id ornare arcu odio ut. Aliquet nec ullamcorper sit amet risus nullam eget felis eget. Fringilla urna porttitor rhoncus dolor purus. Arcu non odio euismod lacinia. Eu consequat ac felis donec. Venenatis lectus magna fringilla urna porttitor rhoncus. Odio facilisis mauris sit amet massa. Et sollicitudin ac orci phasellus egestas. Egestas sed sed risus pretium quam vulputate. Ornare lectus sit amet est placerat.
+
+Pacotes gerais: @markdown, @quarto e @tidyverse
+
+Consultar formatos no [Zotero](https://www.zotero.org/styles) para baixar arquivo `.csl` (saiba mais sobre [Citation Style Language](https://en.wikipedia.org/wiki/Citation_Style_Language)).
+
+# Referências {.unnumbered}

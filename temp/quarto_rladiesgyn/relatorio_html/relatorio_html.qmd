@@ -1,0 +1,202 @@
+---
+title: "Meu relatório em Quarto" # Título do relatório
+subtitle: "**Minicurso - Introdução ao Quarto**"
+author: "Ariane Hayana" # Autor(a)
+lang: pt # Linguagem em português
+date: "`r format(Sys.Date())`" # Data do relatório
+date-format: short # Formato de data curto: dd/MM/yyyy 
+toc: true # Adiciona um índice no relatório
+format: 
+    html: 
+      css: ["custom.css"] # Customização com css
+      code-fold: false # code-fold: true para "ocultar" o bloco de códigos
+      code-tools: true  #code-tools: true para ativar ferramentas de interação com os códigos
+  #    number-sections: true # Número de seções/subseções
+      theme: 
+        light: cosmo
+        dark: superhero # Sugestão: superhero/vapor Mudar o tema do relatório aqui
+title-block-banner: "#874a9c" # Pode ser 'true', uma cor ou imagem
+code-annotations: hover # Para anotações em códigos
+execute:
+  warning: false
+  message: false
+reference-location: margin
+citation-location: margin
+bibliography: references.bib
+params:
+  dataset: "iris" # Parâmetros aplicável em todo o documento
+---
+
+```{r}
+#| echo: false
+
+# Script para logo na página
+htmltools::img(
+  src = knitr::image_uri(file.path("img", "logo.png")),
+  alt = 'logo',
+  style = 'position:absolute; top:0; left:20px; padding:30px;'
+)
+```
+
+# Conjunto de dados: Iris
+
+O conjunto de dados consiste em 50 amostras de cada uma das três espécies de *Iris* ( *Iris setosa*, *Iris virginica* e *Iris versicolor*). Quatro variáveis foram medidas em cada amostra: o comprimento e a largura das sépalas e pétalas, em centímetros.
+
+Fonte: [Wikipédia](https://pt.wikipedia.org/wiki/Conjunto_de_dados_flor_Iris)
+
+Os dados podem ser consultados na guia *Tabela*, bem como as imagens das flores:
+
+::: panel-tabset
+## Tabela
+
+```{r}
+iris |>
+  reactable::reactable(groupBy = "Species", # Agrupando pela coluna 'Species'
+  searchable = TRUE, # Inserindo uma busca na tabela
+  outlined = TRUE) # Linhas na tabela
+```
+
+## Setosa
+
+``` md
+![Iris setosa](img/setosa.png){fig-align="center" width="300"}
+```
+
+![Iris setosa](img/setosa.png){fig-align="center" width="300"}
+
+## Versicolor
+
+``` md
+![Iris versicolor](img/versicolor.png){fig-align="center" width="304"}
+```
+
+![Iris versicolor](img/versicolor.png){fig-align="center" width="304"}
+
+## Virginica
+
+``` md
+![Iris virginica](img/virginica.png){fig-align="center" width="300"}
+```
+
+![Iris virginica](img/virginica.png){fig-align="center" width="300"}
+:::
+
+### Inserindo código do R em linha de texto
+
+Você pode automatizar a apresentação de seus resultados no texto:
+
+> O *dataset* `r params$dataset` tem `r ncol(iris)` colunas e `r nrow(iris)` linhas. As variáveis do *dataset* são *`r names(iris)`*.
+
+### Visualizações
+
+Podemos gerar uma matriz de gráficos de dispersão interativa usando a biblioteca `JavaScript D3` do pacote `pairsD3` [@pairsD3].
+
+```{r}
+#| fig-cap: "Matriz interativa - Iris"
+#| code-fold: true
+
+library(pairsD3)
+pairsD3(iris[,1:4], group=iris[,5])
+```
+
+```{r}
+#| fig-width: 5
+#| fig-height: 3
+#| warning: false
+#| fig-align: "center"
+#| fig-cap: "Boxplot estático."
+
+library(ggplot2)
+plot <- ggplot(iris, 
+  aes(x = Species,
+      y =  Sepal.Length)) + 
+  geom_boxplot(aes(fill = Species)) +
+  labs(caption = "Elaborado por: Ariane Hayana") +
+  xlab("Espécies") + 
+  ylab("Sepal Length") + 
+  theme_grey();plot
+```
+
+```{r}
+#| fig-width: 5
+#| fig-height: 3
+#| warning: false
+#| fig-cap: "Boxplot dinâmico."
+
+plotly::ggplotly(plot)
+```
+
+### Tabela descritiva com pacote `summarytools`
+
+```{r}
+library(summarytools) 
+
+descr(iris) |> 
+  round(digits = 3) |> 
+  knitr::kable()
+
+```
+
+-   Fonte: @summarytools.
+
+## Vídeos no relatório Quarto
+
+Para inserir vídeos, após feita as instalações necessárias, basta inserir o link do Youtube na sintaxe a seguir:
+
+``` {.default shortcodes="false"}
+{{< video https://youtu.be/tE88RxsUOuc >}}
+```
+
+O resultado será:
+
+{{< video https://youtu.be/tE88RxsUOuc >}}
+
+Para alterar o tamanho do vídeo, basta inserir `width="xx"` (largura) `height="xx"` (altura), como no exemplo:
+
+``` {.default shortcodes="false"}
+{{< video https://youtu.be/tE88RxsUOuc width="225" height="170" >}}
+```
+
+Para mais detalhes sobre a utilização de vídeos, clique [aqui](https://quarto.org/docs/authoring/videos.html).
+
+::: column-margin
+O resultado com as dimensões `width="225" e height="170"` será assim:
+
+{{< video https://youtu.be/tE88RxsUOuc width="225" height="170" >}}
+:::
+
+## Anotações em códigos
+
+::: callout-warning
+# Necessário instalar Quarto v1.3
+
+O `Code Annotation` é um recurso do Quarto v1.3. Se você quiser usar esse recurso, faça o download e instale o Quarto v1.3 antes de continuar.
+
+Instale a versão de pré-lançamento do Quarto [aqui](https://quarto.org/docs/download/prerelease.html). Vale ressaltar que o pré-lançamento destina-se a fins de *teste*.
+:::
+
+```{r}
+#| warning: false
+#| message: false
+
+library(dados)
+library(reactable)
+library(dplyr)
+
+dados_gapminder |>                                  # <1> 
+  select(continente, pais, ano, pib_per_capita) |>  # <2> 
+  reactable(
+    groupBy = "continente",                         # <3>
+    searchable = TRUE,                              # <4>
+    outlined = TRUE,                                # <5>
+    columns = list(ano = colDef(sortable = TRUE)))   # <6>
+```
+
+1.  Base do pacote {dados}
+2.  Selecionando algumas colunas
+3.  Agrupando pela coluna 'continente'
+4.  Inserindo uma busca na tabela
+5.  Linhas na tabela
+6.  Ordem crescente na coluna 'ano'
+
+

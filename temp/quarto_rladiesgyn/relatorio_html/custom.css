@@ -1,0 +1,17 @@
+/* Customização */
+
+/* Customização do banner no topo da página */
+#title-block-header.quarto-title-block.default .quarto-title .title {
+    color: #ffffff;
+}
+
+/* Cor branca na letra do subtítulo */
+.quarto-title-banner {
+    color: #ffffff;
+}
+
+/* Justificar parágrafos */
+p
+{
+text-align: justify;
+}
